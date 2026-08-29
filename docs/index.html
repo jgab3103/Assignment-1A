@@ -1,1 +1,142 @@
-uni assignment
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Static Site</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #fafafa;
+    }
+
+    /* Fixed Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #222;
+        color: white;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .menu a:hover {
+        opacity: 0.7;
+    }
+
+    /* Main Content */
+    main {
+        max-width: 1100px;
+        margin: 90px auto 40px;
+        padding: 0 2rem;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 700px) {
+        .columns {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-container {
+            padding: 1rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">Assignment 1A</div>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <h1>Welcome</h1>
+    <p>
+        Basic getting started page for our assignment....
+    </p>
+
+    <section class="columns">
+        <article class="card">
+            <h2>Column One</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur vel sem at sapien suscipit volutpat. Integer
+                scelerisque, nibh vel facilisis consequat, velit risus
+                vulputate urna, vitae feugiat nisl metus ut mauris.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Column Two</h2>
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae vitae.
+            </p>
+        </article>
+    </section>
+</main>
+
+</body>
+</html>
