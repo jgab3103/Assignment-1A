@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challenges to Engagement</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #293241;
+        background: #f5f3ef;
+    }
+
+
+    /* =========================
+       FIXED SIDE NAVIGATION
+       ========================= */
+
+    nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+
+        background: #243447;
+        color: white;
+
+        padding: 2.5rem 1.5rem;
+
+        box-shadow: 3px 0 12px rgba(36, 52, 71, 0.12);
+
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.35rem;
+        font-weight: bold;
+        line-height: 1.3;
+
+        margin-bottom: 2.5rem;
+
+        color: #ffffff;
+    }
+
+    .menu {
+        list-style: none;
+    }
+
+    .menu li {
+        margin-bottom: 0.45rem;
+    }
+
+    .menu a {
+        display: block;
+
+        color: #e7edf2;
+        text-decoration: none;
+
+        padding: 0.75rem 0.9rem;
+
+        border-radius: 7px;
+
+        transition:
+            background 0.2s,
+            color 0.2s,
+            transform 0.2s;
+    }
+
+    .menu a:hover {
+        background: #31546a;
+        color: #ffffff;
+        transform: translateX(3px);
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+       ========================= */
+
+    main {
+        margin-left: 250px;
+        max-width: 1100px;
+        padding: 4rem;
+    }
+
+
+    /* =========================
+       HEADINGS
+       ========================= */
+
+    h1 {
+        margin-bottom: 0.7rem;
+
+        font-size: 2.4rem;
+        line-height: 1.2;
+
+        color: #243447;
+    }
+
+    .intro {
+        max-width: 750px;
+        margin-bottom: 3rem;
+
+        color: #596773;
+        font-size: 1.05rem;
+    }
+
+
+    /* =========================
+       FLIP CARD GRID
+       ========================= */
+
+    .card-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1.5rem;
+    }
+
+
+    /* =========================
+       FLIP CARD
+       ========================= */
+
+    .flip-card {
+        background: transparent;
+
+        height: 230px;
+
+        perspective: 1000px;
+
+        cursor: pointer;
+    }
+
+    .flip-card-inner {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+
+        transition: transform 0.6s;
+
+        transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+
+    /* =========================
+       FRONT + BACK
+       ========================= */
+
+    .flip-card-front,
+    .flip-card-back {
+
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 2rem;
+
+        border-radius: 12px;
+
+        backface-visibility: hidden;
+
+        -webkit-backface-visibility: hidden;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    /* =========================
+       FRONT
+       ========================= */
+
+    .flip-card-front {
+
+        background: #fffdf9;
+
+        border: 1px solid #e6e1d8;
+
+        box-shadow:
+            0 3px 10px rgba(36, 52, 71, 0.08);
+    }
+
+    .flip-card-front h2 {
+
+        font-size: 1.25rem;
+
+        color: #31546a;
+
+        margin-bottom: 1rem;
+    }
+
+    .flip-card-front .click-hint {
+
+        font-size: 0.8rem;
+
+        color: #8a969f;
+
+        margin-top: 0.5rem;
+    }
+
+
+    /* =========================
+       BACK
+       ========================= */
+
+    .flip-card-back {
+
+        background: #31546a;
+
+        color: white;
+
+        transform: rotateY(180deg);
+
+        text-align: left;
+
+        align-items: flex-start;
+    }
+
+    .flip-card-back h2 {
+
+        color: white;
+
+        font-size: 1.25rem;
+
+        margin-bottom: 1rem;
+    }
+
+    .flip-card-back p {
+
+        font-size: 0.95rem;
+
+        color: #edf3f5;
+    }
+
+
+    /* =========================
+       HOVER
+       ========================= */
+
+    .flip-card:hover .flip-card-front {
+
+        box-shadow:
+            0 6px 16px rgba(36, 52, 71, 0.13);
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 900px) {
+
+        .card-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (max-width: 700px) {
+
+        nav {
+            position: relative;
+
+            width: 100%;
+            height: auto;
+
+            padding: 1.5rem;
+        }
+
+        .logo {
+            margin-bottom: 1rem;
+        }
+
+        .menu {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 0.3rem;
+        }
+
+        .menu li {
+            margin: 0;
+        }
+
+        .menu a {
+            padding: 0.5rem 0.7rem;
+
+            font-size: 0.9rem;
+        }
+
+        main {
+            margin-left: 0;
+
+            padding: 2rem 1rem;
+        }
+
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     SIDE NAVIGATION
+     ========================= -->
+
+<nav>
+
+
+<div class="logo">
+    Supporting Students
+</div>
+
+<ul class="menu">
+
+    <li>
+        <a href="./about.html">
+            About
+        </a>
+    </li>
+
+    <li>
+        <a href="./challenges-to-engagement.html">
+            Challenges to engagement
+        </a>
+    </li>
+
+    <li>
+        <a href="./student-strategies.html">
+            Student strategies
+        </a>
+    </li>
+
+    <li>
+        <a href="./student-strengths.html">
+            Student strengths
+        </a>
+    </li>
+
+    <li>
+        <a href="./support-for-students.html">
+            Support for students
+        </a>
+    </li>
+
+    <li>
+        <a href="./teacher-actions.html">
+            Teacher actions
+        </a>
+    </li>
+
+</ul>
+
+
+</nav>
+
+<!-- =========================
+     MAIN CONTENT
+     ========================= -->
+
+<main>
+
+
+<h1>Challenges to Engagement</h1>
+
+<p class="intro">
+    There are a range of challenges that can affect the participation,
+    engagement and learning experiences of students. Select a card to
+    explore each challenge.
+</p>
+
+
+<!-- =========================
+     CARD GRID
+     ========================= -->
+
+<div class="card-grid">
+
+
+    <!-- CARD 1 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Presence of Background Noise
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+             
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Background noise can create additional
+                    difficulties for students and make it harder to
+                    distinguish important information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 2 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Difficulties Doing Small Group Work
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+              
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Small group discussions can present challenges
+                    when multiple people are speaking or when students
+                    are unable to clearly follow the conversation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 3 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Physical Effects on Students
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+             
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Students may experience physical or cognitive
+                    fatigue when they need to work harder to access
+                    spoken information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 4 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Difficulties with Assistive Listening Devices
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+             
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Students may experience difficulties using,
+                    connecting or maintaining assistive listening
+                    devices in classroom environments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 5 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Difficulties Following Multi-Part Instructions
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+             
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. When instructions contain several steps,
+                    students may miss information or have difficulty
+                    remembering the sequence of tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 6 -->
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+
+                <h2>
+                    Lacking Confidence
+                </h2>
+
+                <div class="click-hint">
+                    Click to explore →
+                </div>
+
+            </div>
+
+            <div class="flip-card-back">
+
+             
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Students may become reluctant to participate
+                    or ask for clarification if they lack confidence
+                    in communicating their needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</main>
+
+</body>
+</html>

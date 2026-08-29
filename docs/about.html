@@ -7,6 +7,7 @@
 <title>Supporting Students</title>
 
 <style>
+
     * {
         margin: 0;
         padding: 0;
@@ -23,6 +24,7 @@
         color: #293241;
         background: #f5f3ef;
     }
+
 
     /* =========================
        FIXED SIDE NAVIGATION
@@ -85,12 +87,6 @@
         transform: translateX(3px);
     }
 
-    .menu .number {
-        color: #b8d8d8;
-        margin-right: 0.4rem;
-        font-weight: 600;
-    }
-
 
     /* =========================
        MAIN CONTENT
@@ -101,7 +97,7 @@
 
         max-width: 1050px;
 
-        padding: 4rem 4rem;
+        padding: 4rem;
     }
 
 
@@ -110,7 +106,7 @@
        ========================= */
 
     h1 {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         font-size: 2.4rem;
         line-height: 1.2;
@@ -133,29 +129,18 @@
     }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
 
 
     /* =========================
-       SECTIONS
+       ABOUT CARD
        ========================= */
 
-    section {
-        scroll-margin-top: 2rem;
-
-        margin-bottom: 5rem;
-    }
-
-
-    /* =========================
-       CARDS
-       ========================= */
-
-    .card {
+    .about-card {
         background: #fffdf9;
 
-        padding: 2rem;
+        padding: 2.5rem;
 
         border-radius: 10px;
 
@@ -163,19 +148,47 @@
 
         box-shadow:
             0 2px 8px rgba(36, 52, 71, 0.06);
+
+        max-width: 850px;
+    }
+
+    .about-card h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-card p:last-child {
+        margin-bottom: 0;
     }
 
 
     /* =========================
-       TWO COLUMNS
+       GROUP MEMBERS
        ========================= */
 
-    .columns {
-        display: grid;
+    .group {
+        margin-top: 2rem;
 
-        grid-template-columns: 1fr 1fr;
+        padding-top: 1.5rem;
 
-        gap: 2rem;
+        border-top: 1px solid #e6e1d8;
+    }
+
+    .group-title {
+        font-size: 0.85rem;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+
+        color: #7a858c;
+
+        margin-bottom: 0.5rem;
+    }
+
+    .group-members {
+        font-weight: bold;
+
+        color: #31546a;
     }
 
 
@@ -222,12 +235,12 @@
             padding: 2rem 1rem;
         }
 
-        .columns {
-            grid-template-columns: 1fr;
-        }
-
         h1 {
             font-size: 2rem;
+        }
+
+        .about-card {
+            padding: 1.5rem;
         }
     }
 
@@ -243,6 +256,7 @@
 
 <nav>
 
+
 <div class="logo">
     Supporting Students
 </div>
@@ -250,42 +264,37 @@
 <ul class="menu">
 
     <li>
-         <a href="./about.html">
+        <a href="./about.html">
             About
         </a>
     </li>
 
     <li>
         <a href="./challenges-to-engagement.html">
-            
             Challenges to engagement
         </a>
     </li>
 
     <li>
-        <a href="#strategies">
-            
-             Student strategies
+        <a href="./student-strategies.html">
+            Student strategies
         </a>
     </li>
 
     <li>
-        <a href="#strengths">
-            
-            Supports to students
+        <a href="./student-strengths.html">
+            Student strengths
         </a>
     </li>
 
     <li>
-        <a href="#support">
-            
-            Student Strengths
+        <a href="./support-for-students.html">
+            Support for students
         </a>
     </li>
 
     <li>
-        <a href="#teachers">
-          
+        <a href="./teacher-actions.html">
             Teacher actions
         </a>
     </li>
@@ -302,7 +311,63 @@
 <main>
 
 
-</section>
+<h1>
+    Supporting Students Who Are Deaf or Hard of Hearing
+</h1>
+
+
+<div class="about-card">
+
+    <h2>
+        Welcome
+    </h2>
+
+    <p>
+        Welcome to our learning package on supporting students who are
+        deaf or hard of hearing.
+    </p>
+
+    <p>
+        This resource has been designed for teaching staff who may have
+        a student with hearing loss or a student who is deaf in their classroom
+        or school. It aims to build understanding of the experiences
+        and challenges these students may encounter, while providing
+        practical strategies that teachers can use to support
+        participation, engagement and learning.
+    </p>
+
+    <p>
+        Across this learning package, you will explore common challenges
+        faced by students who are deaf or hard of hearing, student
+        strengths and strategies, available supports, and practical
+        actions teachers can take to create a more inclusive classroom
+        environment.
+    </p>
+
+    <p>
+        Our package incorporates a range of interactive digital learning
+        objects to support different ways of engaging with the content.
+        We encourage you to explore the resources, consider how the
+        information relates to your own teaching context, and reflect
+        on how small changes in classroom practice can make a meaningful
+        difference.
+    </p>
+
+
+    <div class="group">
+
+        <div class="group-title">
+            Created by
+        </div>
+
+        <div class="group-members">
+            Isaac · Jessie · Mo · Jamie
+        </div>
+
+    </div>
+
+</div>
+
 
 </main>
 
