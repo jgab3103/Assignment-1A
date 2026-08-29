@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assignment 1A</title>
+<title>Hearing Support Resources</title>
 
 <style>
     * {
@@ -53,14 +53,13 @@
     .menu a {
         color: white;
         text-decoration: none;
-        transition: opacity 0.2s;
     }
 
     .menu a:hover {
         opacity: 0.7;
     }
 
-    /* Main Content */
+    /* Main */
     main {
         max-width: 1100px;
         margin: 90px auto 40px;
@@ -85,13 +84,33 @@
         box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
 
+    .resources ul {
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    .resources li {
+        margin-bottom: 1rem;
+    }
+
+    .resources a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .resources a:hover {
+        text-decoration: underline;
+    }
+
+    .resources p {
+        font-size: 0.95rem;
+        color: #555;
+    }
+
     @media (max-width: 700px) {
         .columns {
             grid-template-columns: 1fr;
-        }
-
-        .nav-container {
-            padding: 1rem;
         }
     }
 </style>
@@ -105,37 +124,65 @@
 
         <ul class="menu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Resources</a></li>
+            <li><a href="#resources">Activities</a></li>
         </ul>
     </div>
 </nav>
 
 <main>
-    <h1>Welcome</h1>
+
+    <h1>Assignment 1A</h1>
+
     <p>
-        Basic getting started page for our assignment....
-    </p>
+        This page provides a starting point for....
 
     <section class="columns">
         <article class="card">
-            <h2>Column One</h2>
+            <h2>About</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur vel sem at sapien suscipit volutpat. Integer
-                scelerisque, nibh vel facilisis consequat, velit risus
-                vulputate urna, vitae feugiat nisl metus ut mauris.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                vel sem at sapien suscipit volutpat. Integer scelerisque nibh vel
+                facilisis consequat, velit risus vulputate urna, vitae feugiat
+                nisl metus ut mauris.
             </p>
         </article>
 
-        <article class="card">
-            <h2>Column Two</h2>
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae vitae.
-            </p>
+        <article class="card resources" id="resources">
+            <h2>Helpful Resources</h2>
+
+            <ul>
+                <li>
+                    <a href="https://www.deafchildrenaustralia.org.au/" target="_blank">
+                        Deaf Children Australia
+                    </a>
+                    <p>Support, advocacy, family services, and education resources.</p>
+                </li>
+
+                <li>
+                    <a href="https://www.hearing.com.au/children-young-adult-services/information-and-resources/" target="_blank">
+                        Hearing Australia
+                    </a>
+                    <p>Information and resources for children and young adults with hearing loss.</p>
+                </li>
+
+                <li>
+                    <a href="https://education.nsw.gov.au/schooling/parents-and-carers/inclusive-learning-support/primary-school/how-your-child-can-be-supported-in-primary-school/itinerant-support-teachers" target="_blank">
+                        NSW Itinerant Support Teachers
+                    </a>
+                    <p>Department of Education information about specialist hearing support in schools.</p>
+                </li>
+
+                <li>
+                    <a href="https://www.nextsense.org.au/" target="_blank">
+                        NextSense
+                    </a>
+                    <p>Early intervention, therapy, cochlear implant, and education services.</p>
+                </li>
+            </ul>
+
         </article>
     </section>
+
 </main>
 
 </body>
