@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Supporting Students</title>
 
 <style>
@@ -84,6 +85,7 @@
     .menu a:hover {
         background: #31546a;
         color: #ffffff;
+
         transform: translateX(3px);
     }
 
@@ -156,8 +158,40 @@
         margin-bottom: 1.5rem;
     }
 
-    .about-card p:last-child {
-        margin-bottom: 0;
+
+    /* =========================
+       CLASSROOM GRAPHIC
+       ========================= */
+
+    .classroom-graphic {
+        float: right;
+
+        width: 42%;
+
+        margin: 0.25rem 0 1.5rem 2rem;
+    }
+
+    .classroom-graphic img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        border-radius: 8px;
+
+        border: 1px solid #e6e1d8;
+
+        box-shadow:
+            0 2px 8px rgba(36, 52, 71, 0.08);
+    }
+
+    .image-caption {
+        margin-top: 0.6rem;
+
+        font-size: 0.75rem;
+        line-height: 1.45;
+
+        color: #7a858c;
     }
 
 
@@ -166,6 +200,8 @@
        ========================= */
 
     .group {
+        clear: both;
+
         margin-top: 2rem;
 
         padding-top: 1.5rem;
@@ -242,42 +278,16 @@
         .about-card {
             padding: 1.5rem;
         }
+
+        .classroom-graphic {
+            float: none;
+
+            width: 100%;
+
+            margin: 0 0 1.5rem 0;
+        }
+
     }
-
-    /* =========================
-   FEATURED VIDEO
-   ========================= */
-
-.video-intro {
-    margin: 2rem 0;
-    padding: 1.25rem;
-    background: #eef5f7;
-    border-left: 5px solid #4f7c95;
-    border-radius: 8px;
-}
-
-.video-intro h3 {
-    margin-bottom: 0.5rem;
-    color: #243447;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
 
 </style>
 
@@ -285,55 +295,53 @@
 
 <body>
 
+
 <!-- =========================
      SIDE NAVIGATION
      ========================= -->
 
 <nav>
 
+    <div class="logo">
+        Supporting Students
+    </div>
 
-<div class="logo">
-    Supporting Students
-</div>
+    <ul class="menu">
 
-<ul class="menu">
+        <li>
+            <a href="./index.html">
+                About
+            </a>
+        </li>
 
-    <li>
-        <a href="./index.html">
-            About
-        </a>
-    </li>
+        <li>
+            <a href="./challenges-to-engagement.html">
+                Challenges to engagement
+            </a>
+        </li>
 
-    <li>
-        <a href="./challenges-to-engagement.html">
-            Challenges to engagement
-        </a>
-    </li>
+        <li>
+            <a href="./student-strengths.html">
+                Student strengths
+            </a>
+        </li>
 
+        <li>
+            <a href="./support-for-students.html">
+                Support for students
+            </a>
+        </li>
 
+        <li>
+            <a href="./teacher-actions.html">
+                Teacher actions
+            </a>
+        </li>
 
-    <li>
-        <a href="./student-strengths.html">
-            Student strengths
-        </a>
-    </li>
-
-    <li>
-        <a href="./support-for-students.html">
-            Support for students
-        </a>
-    </li>
-
-    <li>
-        <a href="./teacher-actions.html">
-            Teacher actions
-        </a>
-    </li>
-
-</ul>
-
+    </ul>
 
 </nav>
+
 
 <!-- =========================
      MAIN CONTENT
@@ -341,60 +349,83 @@
 
 <main>
 
+    <h1>
+        Supporting Students Who Are Deaf or Hard of Hearing
+    </h1>
 
-<h1>
-    Supporting Students Who Are Deaf or Hard of Hearing
-</h1>
+
+    <div class="about-card">
+
+        <h2>Welcome</h2>
 
 
-<div class="about-card">
+        <!-- Classroom graphic -->
 
-<h2>Welcome</h2>
+        <div class="classroom-graphic">
 
-<p>
-    Welcome to our learning package on supporting students who are deaf
-    or hard of hearing.
-</p>
+            <img
+                src="./assets/img/4-setting-up-classroom.png"
+                alt="Strategies for effectively setting up a classroom to support students who are deaf or hard of hearing"
+            >
 
-<p>
-    This resource has been developed for teachers and school staff who
-    work with students who are deaf or hard of hearing in mainstream and
-    inclusive classrooms. Its purpose is to build understanding of how
-    hearing loss can influence learning, communication, participation and
-    wellbeing, while providing practical strategies that support equitable
-    access to education.
-</p>
+            <div class="image-caption">
+                <strong>Figure 1.</strong>
+                Strategies for setting up an inclusive classroom.
+            </div>
 
-<p>
-    Students who are deaf or hard of hearing are a diverse group with
-    different communication preferences, levels of hearing, and educational
-    needs. Rather than focusing on limitations, this learning package
-    explores how thoughtful classroom design and inclusive teaching
-    practices can reduce barriers and enable students to thrive.
-</p>
+        </div>
 
-<p>
-    Throughout this package you will explore the challenges to engagement
-    that students may experience, recognise the strengths they bring to the
-    classroom, discover available supports, and learn practical teaching
-    actions that promote inclusion and meaningful participation.
-</p>
 
-<p>
-    We encourage you to engage with the interactive resources, reflect on
-    your own teaching context, and consider how small adjustments to
-    classroom practice can make a significant difference for students who
-    are deaf or hard of hearing.
-</p>
+        <p>
+            Welcome to our learning package on supporting students who are deaf
+            or hard of hearing.
+        </p>
 
-<div class="group">
-    <div class="group-title">Created by</div>
-    <div class="group-members">Isaac · Jessie · Mo · Jamie</div>
-</div>
-  
+        <p>
+            This resource has been developed for teachers and school staff who
+            work with students who are deaf or hard of hearing in mainstream and
+            inclusive classrooms. Its purpose is to build understanding of how
+            hearing loss can influence learning, communication, participation and
+            wellbeing, while providing practical strategies that support equitable
+            access to education.
+        </p>
 
-</div>
+        <p>
+            Students who are deaf or hard of hearing are a diverse group with
+            different communication preferences, levels of hearing, and educational
+            needs. Rather than focusing on limitations, this learning package
+            explores how thoughtful classroom design and inclusive teaching
+            practices can reduce barriers and enable students to thrive.
+        </p>
 
+        <p>
+            Throughout this package you will explore the challenges to engagement
+            that students may experience, recognise the strengths they bring to the
+            classroom, discover available supports, and learn practical teaching
+            actions that promote inclusion and meaningful participation.
+        </p>
+
+        <p>
+            We encourage you to engage with the interactive resources, reflect on
+            your own teaching context, and consider how small adjustments to
+            classroom practice can make a significant difference for students who
+            are deaf or hard of hearing.
+        </p>
+
+
+        <div class="group">
+
+            <div class="group-title">
+                Created by
+            </div>
+
+            <div class="group-members">
+                Isaac · Jessie · Mo · Jamie
+            </div>
+
+        </div>
+
+    </div>
 
 </main>
 
