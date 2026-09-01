@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Supporting Students</title>
+<title>Teacher Actions | Supporting Students</title>
 
 <style>
 
@@ -134,7 +134,7 @@
 
 
     /* =========================
-       ABOUT CARD
+       CONTENT CARD
        ========================= */
 
     .about-card {
@@ -158,6 +158,191 @@
 
     .about-card p:last-child {
         margin-bottom: 0;
+    }
+
+
+    /* =========================
+       ACTION BOX
+       ========================= */
+
+    .action-box {
+        background: #eef5f7;
+
+        border-left: 5px solid #4f7c95;
+
+        padding: 1.4rem 1.5rem;
+
+        margin: 1.5rem 0 2rem 0;
+
+        border-radius: 8px;
+    }
+
+    .action-box h3 {
+        margin-bottom: 0.6rem;
+
+        color: #243447;
+    }
+
+
+    /* =========================
+       PRACTICAL STRATEGIES
+       ========================= */
+
+    .strategy {
+        margin: 1.5rem 0;
+        padding: 1.3rem 1.4rem;
+
+        background: #faf9f6;
+
+        border: 1px solid #e6e1d8;
+
+        border-radius: 8px;
+    }
+
+    .strategy h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .strategy ul {
+        margin: 0.8rem 0 0 1.4rem;
+    }
+
+    .strategy li {
+        margin-bottom: 0.5rem;
+    }
+
+
+    /* =========================
+       QUOTE
+       ========================= */
+
+    blockquote {
+        margin: 1.5rem 0 2rem 0;
+
+        padding: 1.5rem 1.75rem;
+
+        background: #eef5f7;
+
+        border-left: 5px solid #4f7c95;
+
+        border-radius: 8px;
+
+        font-size: 1.08rem;
+
+        color: #293241;
+    }
+
+    blockquote p {
+        margin-bottom: 0.8rem;
+    }
+
+    blockquote cite {
+        display: block;
+
+        font-size: 0.9rem;
+
+        font-style: normal;
+
+        color: #687780;
+    }
+
+
+    /* =========================
+       VIDEO
+       ========================= */
+
+    .video-intro {
+        margin: 2rem 0;
+
+        padding: 1.25rem;
+
+        background: #eef5f7;
+
+        border-left: 5px solid #4f7c95;
+
+        border-radius: 8px;
+    }
+
+    .video-intro h3 {
+        margin-bottom: 0.5rem;
+
+        color: #243447;
+    }
+
+    .video-wrapper {
+        position: relative;
+
+        width: 100%;
+
+        padding-bottom: 56.25%;
+
+        height: 0;
+
+        overflow: hidden;
+
+        border-radius: 8px;
+
+        margin-top: 1rem;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+    }
+
+
+    /* =========================
+       RESOURCE LINKS
+       ========================= */
+
+    .resource-link {
+        margin: 1rem 0;
+        padding: 1rem 1.2rem;
+
+        background: #faf9f6;
+
+        border: 1px solid #e6e1d8;
+
+        border-radius: 7px;
+    }
+
+    .resource-link a {
+        color: #31546a;
+
+        font-weight: bold;
+
+        text-decoration: none;
+    }
+
+    .resource-link a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       REFLECTION
+       ========================= */
+
+    .reflection {
+        margin-top: 2rem;
+
+        padding: 1.5rem;
+
+        background: #f2eee7;
+
+        border-radius: 8px;
+
+        border: 1px solid #e1dbd1;
+    }
+
+    .reflection h3 {
+        margin-bottom: 0.6rem;
     }
 
 
@@ -244,41 +429,6 @@
         }
     }
 
-    /* =========================
-   FEATURED VIDEO
-   ========================= */
-
-.video-intro {
-    margin: 2rem 0;
-    padding: 1.25rem;
-    background: #eef5f7;
-    border-left: 5px solid #4f7c95;
-    border-radius: 8px;
-}
-
-.video-intro h3 {
-    margin-bottom: 0.5rem;
-    color: #243447;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
 </style>
 
 </head>
@@ -290,7 +440,6 @@
      ========================= -->
 
 <nav>
-
 
 <div class="logo">
     Supporting Students
@@ -310,8 +459,6 @@
         </a>
     </li>
 
-
-
     <li>
         <a href="./student-strengths.html">
             Student strengths
@@ -329,7 +476,8 @@
             Teacher actions
         </a>
     </li>
-          <li>
+
+    <li>
         <a href="./references.html">
             References
         </a>
@@ -337,15 +485,14 @@
 
 </ul>
 
-
 </nav>
+
 
 <!-- =========================
      MAIN CONTENT
      ========================= -->
 
 <main>
-
 
 <h1>
     Teacher Actions
@@ -355,62 +502,365 @@
 <div class="about-card">
 
     <h2>
-        Welcome
+        Creating an Inclusive Classroom
     </h2>
 
     <p>
-        Welcome to our learning package on supporting students who are
-        deaf or hard of hearing.
+        Teachers play an important role in ensuring that students who are
+        deaf or hard of hearing can participate fully in classroom learning.
+        Effective support is not simply about providing technology or
+        additional assistance. It also involves understanding how students
+        communicate, anticipating barriers to participation, and adapting
+        everyday teaching practices.
     </p>
+
+    <blockquote>
+
+        <p>
+            “Deaf pupils can learn as much as their hearing peers when they
+            are taught by teachers who recognise and can adapt teaching
+            methods and materials to accommodate their strengths and needs.”
+        </p>
+
+        <cite>
+            Northern Ireland Department of Education, Deaf Friendly Schools Guidance
+        </cite>
+
+    </blockquote>
+
+
+    <div class="action-box">
+
+        <h3>
+            A useful starting point
+        </h3>
+
+        <p>
+            Do not assume what a student can or cannot hear, understand or
+            access. Ask the student, their family and relevant support
+            professionals about their communication preferences and the
+            strategies that work best for them.
+        </p>
+
+    </div>
+
+
+    <h2>
+        Everyday Teacher Actions
+    </h2>
+
+    <p>
+        Many adjustments that support students who are deaf or hard of hearing
+        are simple changes to everyday classroom practice. The aim is to
+        reduce unnecessary barriers while maintaining high expectations for
+        learning.
+    </p>
+
+
+    <div class="strategy">
+
+        <h3>
+            Get the student's attention before speaking
+        </h3>
+
+        <p>
+            Make sure the student knows that you are about to communicate.
+            Use an appropriate visual signal, their name, or another agreed
+            method of gaining attention. Avoid beginning important
+            instructions while facing away from the class.
+        </p>
+
+    </div>
+
+
+    <div class="strategy">
+
+        <h3>
+            Face the student when speaking
+        </h3>
+
+        <p>
+            Where the student's communication relies on visual information,
+            seeing the teacher's face can be important. Avoid speaking while
+            writing on the board, walking around the room, or covering your
+            mouth.
+        </p>
+
+    </div>
+
+
+    <div class="strategy">
+
+        <h3>
+            Make instructions visible
+        </h3>
+
+        <p>
+            Provide important instructions in a visual form as well as
+            verbally. Written instructions, diagrams, key vocabulary,
+            worked examples and lesson outlines can reduce the need for
+            students to rely on hearing information alone.
+        </p>
+
+    </div>
+
+
+    <div class="strategy">
+
+        <h3>
+            Manage classroom discussion
+        </h3>
+
+        <p>
+            Make it clear who is speaking during class discussion. Encourage
+            students to speak one at a time and repeat or summarise important
+            contributions when necessary. This can be particularly important
+            when students are working in groups or when several people are
+            speaking from different parts of the room.
+        </p>
+
+    </div>
+
+
+    <div class="strategy">
+
+        <h3>
+            Consider the classroom environment
+        </h3>
+
+        <p>
+            Think about where the student is seated, the position of the
+            teacher, lighting, background noise and the location of other
+            speakers. Small environmental changes can make it easier for
+            students to access communication and reduce listening effort.
+        </p>
+
+    </div>
+
+
+    <div class="strategy">
+
+        <h3>
+            Check understanding without singling the student out
+        </h3>
+
+        <p>
+            Build regular opportunities for all students to check and
+            demonstrate their understanding. Avoid assuming that a student
+            has understood simply because they appear to be listening.
+            Encourage questions and provide alternative ways to revisit
+            information when needed.
+        </p>
+
+    </div>
+
+
+    <h2>
+        Incorporating Sign Languages into Classrooms
+    </h2>
+
+    <p>
+        Sign language can be an important part of language, identity and
+        education for some students who are deaf or hard of hearing.
+        Communication preferences vary considerably between students, so
+        teachers should avoid assuming that every Deaf student uses Auslan.
+        Instead, schools should work with students, families and relevant
+        Deaf education professionals to understand the student's preferred
+        language and communication methods.
+    </p>
+
+
+    <h3>
+        Auslan K–10 Syllabus (2023)
+    </h3>
+
+    <p>
+        NSW introduced the Auslan K–10 Syllabus in 2023. Implementation
+        commenced in 2026, giving NSW schools the opportunity to offer Auslan
+        within K–6 language programs, as the selected language for the
+        mandatory 100 hours of language study in Years 7–10, and as a Stage 5
+        language elective.
+    </p>
+
+    <p>
+        The syllabus recognises Auslan as a distinct language with its own
+        grammar and vocabulary and emphasises the relationship between
+        language, culture and identity. It also highlights the importance of
+        consultation with the Deaf community when Auslan is taught in schools.
+    </p>
+
+
+    <div class="resource-link">
+
+        <a
+            href="https://curriculum.nsw.edu.au/learning-areas/languages/auslan-k-10-2023/overview"
+            target="_blank"
+            rel="noopener">
+            NSW Auslan K–10 Syllabus
+        </a>
+
+    </div>
+
 
     <div class="video-intro">
 
-    <h3>Opening video resource</h3>
+        <h3>
+            Auslan in NSW schools
+        </h3>
 
-    <p>
-        Before exploring this learning package, watch this short video
-        that provides insight into some of the everyday experiences and
-        challenges faced by students who are deaf or hard of hearing. As
-        you watch, consider how hearing loss may affect communication,
-        classroom participation, and a student's sense of inclusion.
-    </p>
+        <p>
+            This resource provides an introduction to the development of the
+            NSW Auslan syllabus and its place within NSW schools.
+        </p>
 
-    <div class="video-wrapper">
-        <iframe
-            src="https://www.youtube.com/embed/3D6Kn800SIk"
-            title="Understanding the experiences of students who are deaf or hard of hearing"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/f_F9MjJ5kTw"
+                title="Auslan K-10 Syllabus"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
     </div>
 
-</div>
+
+    <h2>
+        Indigenous Sign Languages
+    </h2>
 
     <p>
-        This resource has been designed for teaching staff who may have
-        a student with hearing loss or a student who is deaf in their classroom
-        or school. It aims to build understanding of the experiences
-        and challenges these students may encounter, while providing
-        practical strategies that teachers can use to support
-        participation, engagement and learning.
+        Australian Indigenous sign languages are an important part of the
+        diverse linguistic landscape of Aboriginal and Torres Strait Islander
+        communities. They are not simply alternative communication systems
+        for Deaf people. In some communities, Indigenous sign languages may
+        function alongside spoken languages and be used by both hearing and
+        non-hearing community members.
     </p>
 
     <p>
-        Across this learning package, you will explore common challenges
-        faced by students who are deaf or hard of hearing, student
-        strengths and strategies, available supports, and practical
-        actions teachers can take to create a more inclusive classroom
-        environment.
+        This is particularly important for teachers working in communities
+        where Indigenous sign languages are used. For some students, an
+        Indigenous sign language may be part of the language used in their
+        home or community. Teachers therefore need to consider the student's
+        broader linguistic and cultural context rather than assuming that
+        Auslan or spoken English is their primary means of communication.
+    </p>
+
+
+    <div class="action-box">
+
+        <h3>
+            Why this matters for teachers
+        </h3>
+
+        <p>
+            Understanding the linguistic diversity of Aboriginal and Torres
+            Strait Islander communities can help teachers avoid making
+            assumptions about how students communicate. Language, culture,
+            identity and community are closely connected, and these factors
+            should be considered when planning inclusive teaching and learning.
+        </p>
+
+    </div>
+
+
+    <h3>
+        Learn more about Australian Indigenous Sign Languages
+    </h3>
+
+
+    <div class="resource-link">
+
+        <a
+            href="https://www.abc.net.au/news/2021-06-19/australian-indigenous-sign-languages/100185504"
+            target="_blank"
+            rel="noopener">
+            ABC News – Aboriginal sign languages have been used for thousands of years
+        </a>
+
+    </div>
+
+
+    <div class="resource-link">
+
+        <a
+            href="https://www.iltyemiltyem.com/film/sign-in-the-hansen-river-2014/"
+            target="_blank"
+            rel="noopener">
+            Sign in the Hansen River
+        </a>
+
+    </div>
+
+
+    <div class="video-intro">
+
+        <h3>
+            A More Inclusive Future: A Story from Kempsey High School
+        </h3>
+
+        <p>
+            This video explores work involving Indigenous sign languages and
+            the potential for greater recognition of these languages within
+            education.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/Zu2rqu7snus"
+                title="A More Inclusive Future: A Story from Kempsey High School"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+    <h2>
+        Work With the Student, Not Just the Support
+    </h2>
+
+    <p>
+        Perhaps the most important teacher action is to involve the student
+        in decisions about their learning. A strategy that works well for one
+        student may not work for another. Students who are deaf or hard of
+        hearing are not a homogeneous group, and their communication,
+        educational and social needs can change across different contexts.
     </p>
 
     <p>
-        Our package incorporates a range of interactive digital learning
-        objects to support different ways of engaging with the content.
-        We encourage you to explore the resources, consider how the
-        information relates to your own teaching context, and reflect
-        on how small changes in classroom practice can make a meaningful
-        difference.
+        Teachers should therefore work collaboratively with students,
+        families, interpreters, support teachers and other relevant
+        professionals. The goal is not to lower expectations or remove
+        students from ordinary classroom experiences, but to remove barriers
+        that prevent them from demonstrating what they know and can do.
     </p>
+
+
+    <div class="reflection">
+
+        <h3>
+            Reflection
+        </h3>
+
+        <p>
+            Think about a class you currently teach, or have taught recently.
+            What information in that class is primarily communicated through
+            listening?
+        </p>
+
+        <p>
+            What could you change so that the same information is also
+            accessible visually or through another form of communication?
+        </p>
+
+    </div>
 
 
     <div class="group">
@@ -426,7 +876,6 @@
     </div>
 
 </div>
-
 
 </main>
 
