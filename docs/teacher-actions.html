@@ -558,6 +558,50 @@
 
 
     <div class="strategy">
+                    <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Get the student's attention before speaking
@@ -570,10 +614,222 @@
             instructions while facing away from the class.
         </p>
 
+        <!-- ===================================
+     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
+=================================== -->
+
+<style>
+.dlo{
+    margin:1.5rem 0;
+    border:1px solid #d9e3e8;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.dlo summary{
+    list-style:none;
+    cursor:pointer;
+    padding:1rem 1.25rem;
+    background:#eef5f7;
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    font-weight:bold;
+    color:#243447;
+}
+
+.dlo summary::-webkit-details-marker{
+    display:none;
+}
+
+.dlo summary:hover{
+    background:#e5f1f4;
+}
+
+.dlo-arrow{
+    margin-left:auto;
+    transition:transform .25s ease;
+}
+
+.dlo[open] .dlo-arrow{
+    transform:rotate(90deg);
+}
+
+.dlo-body{
+    padding:1.5rem;
+}
+
+.scenario{
+    background:#faf9f6;
+    border-left:4px solid #4f7c95;
+    padding:1rem;
+    border-radius:6px;
+    margin-bottom:1rem;
+}
+
+.options{
+    display:grid;
+    gap:.75rem;
+}
+
+.option{
+    border:1px solid #d8dee3;
+    border-radius:8px;
+    padding:1rem;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    border-color:#4f7c95;
+    background:#f8fbfc;
+}
+
+.option input{
+    display:none;
+}
+
+.option.correct:has(input:checked){
+    background:#e8f5ea;
+    border-color:#2e7d32;
+}
+
+.option.incorrect:has(input:checked){
+    background:#fdecec;
+    border-color:#c62828;
+}
+
+.feedback{
+    display:none;
+    margin-top:.6rem;
+    font-size:.92rem;
+}
+
+.option:has(input:checked) .feedback{
+    display:block;
+}
+</style>
+
+<details class="dlo">
+
+    <summary>
+
+        <!-- DLO icon -->
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+            <rect x="3" y="4" width="22" height="16" rx="3" stroke="#31546A" stroke-width="2"/>
+            <path d="M9 24H19" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14 20V24" stroke="#31546A" stroke-width="2"/>
+            <path d="M12 9L18 12L12 15V9Z" fill="#31546A"/>
+        </svg>
+
+        <div>
+            <div>Digital Learning Object</div>
+            <div style="font-size:.8rem;font-weight:normal;">
+                Branching classroom scenario
+            </div>
+        </div>
+
+        <svg class="dlo-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18" stroke="#31546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    </summary>
+
+    <div class="dlo-body">
+
+        <div class="scenario">
+            <strong>Scenario</strong>
+            <p style="margin-top:.5rem;">
+                Maya is working quietly while the class completes an activity.
+                You are about to give an important instruction that everyone
+                needs to hear.
+            </p>
+            <p><strong>What should you do first?</strong></p>
+        </div>
+
+        <div class="options">
+
+            <label class="option incorrect">
+                <input type="radio" name="attention">
+                <strong>A.</strong> Begin speaking immediately while writing on the board.
+
+                <div class="feedback">
+                    ❌ Important instructions should not begin while your face is turned away or before the student knows you are speaking.
+                </div>
+            </label>
+
+            <label class="option correct">
+                <input type="radio" name="attention">
+                <strong>B.</strong> Gain Maya's attention using her name or an agreed visual signal, then speak while facing the class.
+
+                <div class="feedback">
+                    ✅ Correct. Getting the student's attention first ensures they are ready to receive the information and can access visual cues such as facial expression and lip movements.
+                </div>
+            </label>
+
+            <label class="option incorrect">
+                <input type="radio" name="attention">
+                <strong>C.</strong> Ask another student to repeat the instruction afterwards.
+
+                <div class="feedback">
+                    ❌ This reduces independence and may result in incomplete or inaccurate information. Communicate directly with the student whenever possible.
+                </div>
+            </label>
+
+        </div>
+
+    </div>
+
+</details>
+
     </div>
 
 
-    <div class="strategy">
+    <div class="strategy">            <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Face the student when speaking
@@ -586,10 +842,281 @@
             mouth.
         </p>
 
+<!-- ===================================
+     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
+=================================== -->
+
+<style>
+.dlo{
+    margin:1.5rem 0;
+    border:1px solid #d9e3e8;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.dlo summary{
+    list-style:none;
+    cursor:pointer;
+    padding:1rem 1.25rem;
+    background:#eef5f7;
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    font-weight:bold;
+    color:#243447;
+}
+
+.dlo summary::-webkit-details-marker{
+    display:none;
+}
+
+.dlo summary:hover{
+    background:#e5f1f4;
+}
+
+.dlo-arrow{
+    margin-left:auto;
+    transition:transform .25s ease;
+}
+
+.dlo[open] .dlo-arrow{
+    transform:rotate(90deg);
+}
+
+.dlo-body{
+    padding:1.5rem;
+}
+
+.scenario{
+    background:#faf9f6;
+    border-left:4px solid #4f7c95;
+    padding:1rem;
+    border-radius:6px;
+    margin-bottom:1rem;
+}
+
+.options{
+    display:grid;
+    gap:.75rem;
+}
+
+.option{
+    border:1px solid #d8dee3;
+    border-radius:8px;
+    padding:1rem;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    border-color:#4f7c95;
+    background:#f8fbfc;
+}
+
+.option input{
+    display:none;
+}
+
+.option.correct:has(input:checked){
+    background:#e8f5ea;
+    border-color:#2e7d32;
+}
+
+.option.incorrect:has(input:checked){
+    background:#fdecec;
+    border-color:#c62828;
+}
+
+.feedback{
+    display:none;
+    margin-top:.6rem;
+    font-size:.92rem;
+}
+
+.option:has(input:checked) .feedback{
+    display:block;
+}
+</style>
+
+<details class="dlo">
+
+    <summary>
+
+        <!-- DLO icon -->
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="10" r="5" stroke="#31546A" stroke-width="2"/>
+            <path d="M5 24C5.8 18.8 9 16 14 16C19 16 22.2 18.8 23 24"
+                  stroke="#31546A" stroke-width="2"
+                  stroke-linecap="round"/>
+            <path d="M9 10H6" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 10H19" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <div>
+            <div>Digital Learning Object</div>
+            <div style="font-size:.8rem;font-weight:normal;">
+                Branching classroom scenario
+            </div>
+        </div>
+
+        <svg class="dlo-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+
+    </summary>
+
+    <div class="dlo-body">
+
+        <div class="scenario">
+            <strong>Scenario</strong>
+
+            <p style="margin-top:.5rem;">
+                You are explaining an important task to the class. 
+                Some students rely on visual information to support their 
+                understanding of what you are saying.
+            </p>
+
+            <p>
+                You need to continue writing instructions on the board 
+                while explaining the task.
+            </p>
+
+            <p>
+                <strong>What is the most accessible approach?</strong>
+            </p>
+        </div>
+
+        <div class="options">
+
+            <label class="option correct">
+                <input type="radio" name="face-speaking">
+
+                <strong>A.</strong>
+                Stop writing, turn towards the students, and speak while 
+                facing the class.
+
+                <div class="feedback">
+                    ✅ Correct. Facing the student allows them to access 
+                    important visual information, including facial expression 
+                    and other communication cues. Give important instructions 
+                    while facing the class whenever possible.
+                </div>
+            </label>
+
+            <label class="option incorrect">
+                <input type="radio" name="face-speaking">
+
+                <strong>B.</strong>
+                Continue writing while speaking because students can hear 
+                the instructions.
+
+                <div class="feedback">
+                    ❌ Not the most accessible approach. Hearing the words 
+                    may not provide enough information for students who rely 
+                    on visual communication cues. Avoid speaking while your 
+                    face is turned away.
+                </div>
+            </label>
+
+            <label class="option incorrect">
+                <input type="radio" name="face-speaking">
+
+                <strong>C.</strong>
+                Walk around the classroom while giving the instructions 
+                so you can reach everyone.
+
+                <div class="feedback">
+                    ❌ Moving around can make it harder for students to 
+                    maintain visual access to your face. When communicating 
+                    important information, remain in a position where 
+                    students can clearly see you.
+                </div>
+            </label>
+
+        </div>
+
+    </div>
+
+</details>
+
+
+
+</div>
+
+<script>
+function checkDLO() {
+
+    const answer = document.querySelector('input[name="teacher"]:checked');
+
+    document.getElementById("correct").style.display = "none";
+    document.getElementById("incorrect").style.display = "none";
+
+    if (!answer) {
+        alert("Please choose an answer first.");
+        return;
+    }
+
+    if (answer.value === "b") {
+        document.getElementById("correct").style.display = "block";
+    } else {
+        document.getElementById("incorrect").style.display = "block";
+    }
+}
+</script>
+
     </div>
 
 
     <div class="strategy">
+                    <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Make instructions visible
@@ -602,10 +1129,305 @@
             students to rely on hearing information alone.
         </p>
 
+<!-- ===================================
+     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
+=================================== -->
+
+<style>
+.dlo{
+    margin:1.5rem 0;
+    border:1px solid #d9e3e8;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.dlo summary{
+    list-style:none;
+    cursor:pointer;
+    padding:1rem 1.25rem;
+    background:#eef5f7;
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    font-weight:bold;
+    color:#243447;
+}
+
+.dlo summary::-webkit-details-marker{
+    display:none;
+}
+
+.dlo summary:hover{
+    background:#e5f1f4;
+}
+
+.dlo-arrow{
+    margin-left:auto;
+    transition:transform .25s ease;
+}
+
+.dlo[open] .dlo-arrow{
+    transform:rotate(90deg);
+}
+
+.dlo-body{
+    padding:1.5rem;
+}
+
+.scenario{
+    background:#faf9f6;
+    border-left:4px solid #4f7c95;
+    padding:1rem;
+    border-radius:6px;
+    margin-bottom:1.25rem;
+}
+
+.choice-group{
+    display:grid;
+    gap:.75rem;
+}
+
+.choice{
+    position:relative;
+}
+
+.choice input{
+    position:absolute;
+    opacity:0;
+}
+
+.choice label{
+    display:block;
+    border:1px solid #d8dee3;
+    border-radius:8px;
+    padding:1rem;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.choice label:hover{
+    border-color:#4f7c95;
+    background:#f8fbfc;
+}
+
+.choice input:checked + label{
+    background:#e8f5ea;
+    border-color:#2e7d32;
+}
+
+.choice-icon{
+    font-size:1.2rem;
+    margin-right:.5rem;
+}
+
+.explanation{
+    margin-top:1.25rem;
+    padding:1rem;
+    background:#eef5f7;
+    border-radius:8px;
+    font-size:.92rem;
+    line-height:1.5;
+}
+
+.key-practice{
+    margin-top:1rem;
+    padding:1rem;
+    border-radius:8px;
+    background:#faf9f6;
+}
+
+.key-practice strong{
+    color:#31546A;
+}
+</style>
+
+<details class="dlo">
+
+    <summary>
+
+        <!-- DLO icon -->
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+            <rect x="4" y="4" width="20" height="16" rx="2"
+                  stroke="#31546A" stroke-width="2"/>
+            <path d="M8 9H20"
+                  stroke="#31546A" stroke-width="2"
+                  stroke-linecap="round"/>
+            <path d="M8 13H16"
+                  stroke="#31546A" stroke-width="2"
+                  stroke-linecap="round"/>
+            <path d="M8 17H18"
+                  stroke="#31546A" stroke-width="2"
+                  stroke-linecap="round"/>
+            <path d="M10 24H18"
+                  stroke="#31546A" stroke-width="2"
+                  stroke-linecap="round"/>
+        </svg>
+
+        <div>
+            <div>Digital Learning Object</div>
+            <div style="font-size:.8rem;font-weight:normal;">
+                Build a visually accessible lesson
+            </div>
+        </div>
+
+        <svg class="dlo-arrow" width="18" height="18"
+             viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+
+    </summary>
+
+    <div class="dlo-body">
+
+        <div class="scenario">
+
+            <strong>Classroom scenario</strong>
+
+            <p style="margin-top:.5rem;">
+                You are introducing a new activity. The task has several
+                steps, some new vocabulary, and a worked example.
+            </p>
+
+            <p>
+                You want students to be able to access the instructions
+                without relying on hearing everything you say.
+            </p>
+
+            <p>
+                <strong>Which lesson setup provides the strongest visual support?</strong>
+            </p>
+
+        </div>
+
+        <div class="choice-group">
+
+            <div class="choice">
+                <input type="radio" name="visual-support" id="visual-a">
+
+                <label for="visual-a">
+                    <span class="choice-icon">🗣️</span>
+                    <strong>A.</strong>
+                    Explain the task verbally and ask students to listen
+                    carefully.
+                </label>
+            </div>
+
+            <div class="choice">
+                <input type="radio" name="visual-support" id="visual-b">
+
+                <label for="visual-b">
+                    <span class="choice-icon">📝</span>
+                    <strong>B.</strong>
+                    Explain the task verbally while displaying the key
+                    instructions, vocabulary and a worked example.
+                </label>
+            </div>
+
+            <div class="choice">
+                <input type="radio" name="visual-support" id="visual-c">
+
+                <label for="visual-c">
+                    <span class="choice-icon">📄</span>
+                    <strong>C.</strong>
+                    Give students a written copy of the instructions
+                    after explaining the task.
+                </label>
+            </div>
+
+        </div>
+
+        <div class="explanation">
+            <strong>Why visual information matters</strong>
+
+            <p style="margin-top:.5rem;">
+                Providing information visually as well as verbally gives
+                students another way to access and revisit important
+                information. This can include written instructions,
+                diagrams, key vocabulary, worked examples and lesson
+                outlines.
+            </p>
+
+            <p style="margin-top:.5rem;">
+                Visual information can remain available while students
+                are working, reducing the need to remember everything
+                that was communicated verbally.
+            </p>
+        </div>
+
+        <div class="key-practice">
+            <strong>Try this in your classroom</strong>
+
+            <p style="margin-top:.5rem;">
+                When giving important instructions, ask yourself:
+                <em>“Could a student understand what to do if they
+                missed part of what I said?”</em>
+            </p>
+
+            <p style="margin-top:.5rem;">
+                If not, add a visual support such as a short written
+                sequence, diagram, key words, example or lesson outline.
+            </p>
+        </div>
+
+    </div>
+
+</details>
+
+
+
     </div>
 
 
     <div class="strategy">
+                    <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Manage classroom discussion
@@ -623,6 +1445,50 @@
 
 
     <div class="strategy">
+                    <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Consider the classroom environment
@@ -639,6 +1505,50 @@
 
 
     <div class="strategy">
+                    <span class="dlo-label">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="22"
+                            height="16"
+                            rx="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M9 24H19"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M14 20V24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <path
+                            d="M12 9L18 12L12 15V9Z"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                   
+
+                </span>
 
         <h3>
             Check understanding without singling the student out
