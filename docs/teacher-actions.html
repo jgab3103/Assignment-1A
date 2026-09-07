@@ -1,439 +1,22 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Teacher Actions | Supporting Students</title>
 
-<style>
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        color: #293241;
-        background: #f5f3ef;
-    }
-
-
-    /* =========================
-       FIXED SIDE NAVIGATION
-       ========================= */
-
-    nav {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 250px;
-        height: 100vh;
-
-        background: #243447;
-        color: white;
-
-        padding: 2.5rem 1.5rem;
-
-        box-shadow: 3px 0 12px rgba(36, 52, 71, 0.12);
-
-        z-index: 1000;
-    }
-
-    .logo {
-        font-size: 1.35rem;
-        font-weight: bold;
-        line-height: 1.3;
-
-        margin-bottom: 2.5rem;
-
-        color: #ffffff;
-    }
-
-    .menu {
-        list-style: none;
-    }
-
-    .menu li {
-        margin-bottom: 0.45rem;
-    }
-
-    .menu a {
-        display: block;
-
-        color: #e7edf2;
-        text-decoration: none;
-
-        padding: 0.75rem 0.9rem;
-
-        border-radius: 7px;
-
-        transition:
-            background 0.2s,
-            color 0.2s,
-            transform 0.2s;
-    }
-
-    .menu a:hover {
-        background: #31546a;
-        color: #ffffff;
-        transform: translateX(3px);
-    }
-
-
-    /* =========================
-       MAIN CONTENT
-       ========================= */
-
-    main {
-        margin-left: 250px;
-
-        max-width: 1050px;
-
-        padding: 4rem;
-    }
-
-
-    /* =========================
-       HEADINGS
-       ========================= */
-
-    h1 {
-        margin-bottom: 1.5rem;
-
-        font-size: 2.4rem;
-        line-height: 1.2;
-
-        color: #243447;
-    }
-
-    h2 {
-        margin-bottom: 1.2rem;
-
-        font-size: 1.7rem;
-
-        color: #31546a;
-    }
-
-    h3 {
-        margin-bottom: 0.8rem;
-
-        color: #31546a;
-    }
-
-    p {
-        margin-bottom: 1.2rem;
-    }
-
-
-    /* =========================
-       CONTENT CARD
-       ========================= */
-
-    .about-card {
-        background: #fffdf9;
-
-        padding: 2.5rem;
-
-        border-radius: 10px;
-
-        border: 1px solid #e6e1d8;
-
-        box-shadow:
-            0 2px 8px rgba(36, 52, 71, 0.06);
-
-        max-width: 850px;
-    }
-
-    .about-card h2 {
-        margin-bottom: 1.5rem;
-    }
-
-    .about-card p:last-child {
-        margin-bottom: 0;
-    }
-
-
-    /* =========================
-       ACTION BOX
-       ========================= */
-
-    .action-box {
-        background: #eef5f7;
-
-        border-left: 5px solid #4f7c95;
-
-        padding: 1.4rem 1.5rem;
-
-        margin: 1.5rem 0 2rem 0;
-
-        border-radius: 8px;
-    }
-
-    .action-box h3 {
-        margin-bottom: 0.6rem;
-
-        color: #243447;
-    }
-
-
-    /* =========================
-       PRACTICAL STRATEGIES
-       ========================= */
-
-    .strategy {
-        margin: 1.5rem 0;
-        padding: 1.3rem 1.4rem;
-
-        background: #faf9f6;
-
-        border: 1px solid #e6e1d8;
-
-        border-radius: 8px;
-    }
-
-    .strategy h3 {
-        margin-bottom: 0.5rem;
-    }
-
-    .strategy ul {
-        margin: 0.8rem 0 0 1.4rem;
-    }
-
-    .strategy li {
-        margin-bottom: 0.5rem;
-    }
-
-
-    /* =========================
-       QUOTE
-       ========================= */
-
-    blockquote {
-        margin: 1.5rem 0 2rem 0;
-
-        padding: 1.5rem 1.75rem;
-
-        background: #eef5f7;
-
-        border-left: 5px solid #4f7c95;
-
-        border-radius: 8px;
-
-        font-size: 1.08rem;
-
-        color: #293241;
-    }
-
-    blockquote p {
-        margin-bottom: 0.8rem;
-    }
-
-    blockquote cite {
-        display: block;
-
-        font-size: 0.9rem;
-
-        font-style: normal;
-
-        color: #687780;
-    }
-
-
-    /* =========================
-       VIDEO
-       ========================= */
-
-    .video-intro {
-        margin: 2rem 0;
-
-        padding: 1.25rem;
-
-        background: #eef5f7;
-
-        border-left: 5px solid #4f7c95;
-
-        border-radius: 8px;
-    }
-
-    .video-intro h3 {
-        margin-bottom: 0.5rem;
-
-        color: #243447;
-    }
-
-    .video-wrapper {
-        position: relative;
-
-        width: 100%;
-
-        padding-bottom: 56.25%;
-
-        height: 0;
-
-        overflow: hidden;
-
-        border-radius: 8px;
-
-        margin-top: 1rem;
-    }
-
-    .video-wrapper iframe {
-        position: absolute;
-
-        inset: 0;
-
-        width: 100%;
-        height: 100%;
-
-        border: 0;
-    }
-
-
-    /* =========================
-       RESOURCE LINKS
-       ========================= */
-
-    .resource-link {
-        margin: 1rem 0;
-        padding: 1rem 1.2rem;
-
-        background: #faf9f6;
-
-        border: 1px solid #e6e1d8;
-
-        border-radius: 7px;
-    }
-
-    .resource-link a {
-        color: #31546a;
-
-        font-weight: bold;
-
-        text-decoration: none;
-    }
-
-    .resource-link a:hover {
-        text-decoration: underline;
-    }
-
-
-    /* =========================
-       REFLECTION
-       ========================= */
-
-    .reflection {
-        margin-top: 2rem;
-
-        padding: 1.5rem;
-
-        background: #f2eee7;
-
-        border-radius: 8px;
-
-        border: 1px solid #e1dbd1;
-    }
-
-    .reflection h3 {
-        margin-bottom: 0.6rem;
-    }
-
-
-    /* =========================
-       GROUP MEMBERS
-       ========================= */
-
-    .group {
-        margin-top: 2rem;
-
-        padding-top: 1.5rem;
-
-        border-top: 1px solid #e6e1d8;
-    }
-
-    .group-title {
-        font-size: 0.85rem;
-
-        text-transform: uppercase;
-
-        letter-spacing: 0.08em;
-
-        color: #7a858c;
-
-        margin-bottom: 0.5rem;
-    }
-
-    .group-members {
-        font-weight: bold;
-
-        color: #31546a;
-    }
-
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 700px) {
-
-        nav {
-            position: relative;
-
-            width: 100%;
-            height: auto;
-
-            padding: 1.5rem;
-        }
-
-        .logo {
-            margin-bottom: 1rem;
-        }
-
-        .menu {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 0.3rem;
-        }
-
-        .menu li {
-            margin: 0;
-        }
-
-        .menu a {
-            padding: 0.5rem 0.7rem;
-
-            font-size: 0.9rem;
-        }
-
-        main {
-            margin-left: 0;
-
-            padding: 2rem 1rem;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        .about-card {
-            padding: 1.5rem;
-        }
-    }
-
-</style>
+<link rel="stylesheet" href="./assets/css/actions.css">
 
 </head>
 
+
 <body>
+
 
 <!-- =========================
      SIDE NAVIGATION
@@ -441,49 +24,49 @@
 
 <nav>
 
-<div class="logo">
-    Supporting Students
-</div>
+    <div class="logo">
+        Supporting Students
+    </div>
 
-<ul class="menu">
+    <ul class="menu">
 
-    <li>
-        <a href="./index.html">
-            About
-        </a>
-    </li>
+        <li>
+            <a href="./index.html">
+                About
+            </a>
+        </li>
 
-    <li>
-        <a href="./challenges-to-engagement.html">
-            Challenges to engagement
-        </a>
-    </li>
+        <li>
+            <a href="./challenges-to-engagement.html">
+                Challenges to engagement
+            </a>
+        </li>
 
-    <li>
-        <a href="./student-strengths.html">
-            Student strengths
-        </a>
-    </li>
+        <li>
+            <a href="./student-strengths.html">
+                Student strengths
+            </a>
+        </li>
 
-    <li>
-        <a href="./support-for-students.html">
-            Support for students
-        </a>
-    </li>
+        <li>
+            <a href="./support-for-students.html">
+                Support for students
+            </a>
+        </li>
 
-    <li>
-        <a href="./teacher-actions.html">
-            Teacher actions
-        </a>
-    </li>
+        <li>
+            <a href="./teacher-actions.html">
+                Teacher actions
+            </a>
+        </li>
 
-    <li>
-        <a href="./references.html">
-            References
-        </a>
-    </li>
+        <li>
+            <a href="./references.html">
+                References
+            </a>
+        </li>
 
-</ul>
+    </ul>
 
 </nav>
 
@@ -494,629 +77,650 @@
 
 <main>
 
-<h1>
-    Teacher Actions
-</h1>
+    <div class="about-card">
+
+        <h1>
+            Digital Learning Objects
+        </h1>
 
 
-<div class="about-card">
-
-    <h2>
-        Creating an Inclusive Classroom
-    </h2>
-
-    <p>
-        Teachers play an important role in ensuring that students who are
-        deaf or hard of hearing can participate fully in classroom learning.
-        Effective support is not simply about providing technology or
-        additional assistance. It also involves understanding how students
-        communicate, anticipating barriers to participation, and adapting
-        everyday teaching practices.
-    </p>
-
-    <blockquote>
-
-        <p>
-            “Deaf pupils can learn as much as their hearing peers when they
-            are taught by teachers who recognise and can adapt teaching
-            methods and materials to accommodate their strengths and needs.”
-        </p>
-
-        <cite>
-            Northern Ireland Department of Education, Deaf Friendly Schools Guidance
-        </cite>
-
-    </blockquote>
+        <div class="dlo-list">
 
 
-    <div class="action-box">
+            <!-- =========================================
+                 DLO 1
+                 ========================================= -->
 
-        <h3>
-            A useful starting point
-        </h3>
+     <!-- =========================================================
+     DLO 1
+     ========================================= -->
 
-        <p>
-            Do not assume what a student can or cannot hear, understand or
-            access. Ask the student, their family and relevant support
-            professionals about their communication preferences and the
-            strategies that work best for them.
-        </p>
+<details class="dlo">
 
-    </div>
+    <summary>
+
+        <span class="dlo-number">
+            DLO 1
+        </span>
+
+        <span class="dlo-title">
+            Get the student's attention before speaking
+        </span>
+
+        <svg class="dlo-arrow"
+             width="18"
+             height="18"
+             viewBox="0 0 24 24"
+             fill="none">
+
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+
+        </svg>
+
+    </summary>
 
 
-    <h2>
-        Everyday Teacher Actions
-    </h2>
-
-    <p>
-        Many adjustments that support students who are deaf or hard of hearing
-        are simple changes to everyday classroom practice. The aim is to
-        reduce unnecessary barriers while maintaining high expectations for
-        learning.
-    </p>
-
-
-    <div class="strategy">
-                    <span class="dlo-label">
-
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
-
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                   
-
-                </span>
+    <div class="dlo-body">
 
         <h3>
             Get the student's attention before speaking
         </h3>
 
         <p>
-            Make sure the student knows that you are about to communicate.
-            Use an appropriate visual signal, their name, or another agreed
-            method of gaining attention. Avoid beginning important
-            instructions while facing away from the class.
+            Make sure that the student knows that you are about
+            to communicate. Use an appropriate visual signal,
+            their name, or another agreed method of gaining
+            attention. Avoid beginning important instructions
+            while facing away from the class
+            (Northern Ireland Department of Education, n.d.).
         </p>
 
-        <!-- ===================================
-     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
-=================================== -->
 
-<style>
-.dlo{
-    margin:1.5rem 0;
-    border:1px solid #d9e3e8;
-    border-radius:10px;
-    overflow:hidden;
-    background:#fff;
-}
+        <!-- WHY THIS MATTERS -->
 
-.dlo summary{
-    list-style:none;
-    cursor:pointer;
-    padding:1rem 1.25rem;
-    background:#eef5f7;
-    display:flex;
-    align-items:center;
-    gap:.8rem;
-    font-weight:bold;
-    color:#243447;
-}
+        <div class="action-box">
 
-.dlo summary::-webkit-details-marker{
-    display:none;
-}
+            <h3>
+                Why does this matter?
+            </h3>
 
-.dlo summary:hover{
-    background:#e5f1f4;
-}
+            <p>
+                Students who are deaf or hard of hearing may rely
+                on visual information to supplement or access spoken
+                communication. Gaining the student's attention before
+                speaking provides an opportunity for the student to
+                orient towards the teacher and access available visual
+                information (Northern Ireland Department of Education,
+                n.d.; Marschark et al., 2011).
+            </p>
 
-.dlo-arrow{
-    margin-left:auto;
-    transition:transform .25s ease;
-}
+            <p>
+                This is particularly important when the information
+                being communicated is essential for learning, such as
+                instructions, explanations, changes to an activity or
+                safety information. If communication begins before
+                the student is attending, part of the message may be
+                missed before the student has had an opportunity to
+                access the information.
+            </p>
 
-.dlo[open] .dlo-arrow{
-    transform:rotate(90deg);
-}
+            <p>
+                Gaining attention should also be understood as an
+                individualised practice. Students who are deaf or
+                hard of hearing have diverse communication preferences
+                and may use different combinations of spoken language,
+                sign language, hearing technology and visual communication
+                strategies (Marschark et al., 2011). Teachers should
+                therefore work with the student and relevant support
+                professionals to establish an appropriate method of
+                gaining attention.
+            </p>
 
-.dlo-body{
-    padding:1.5rem;
-}
-
-.scenario{
-    background:#faf9f6;
-    border-left:4px solid #4f7c95;
-    padding:1rem;
-    border-radius:6px;
-    margin-bottom:1rem;
-}
-
-.options{
-    display:grid;
-    gap:.75rem;
-}
-
-.option{
-    border:1px solid #d8dee3;
-    border-radius:8px;
-    padding:1rem;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.option:hover{
-    border-color:#4f7c95;
-    background:#f8fbfc;
-}
-
-.option input{
-    display:none;
-}
-
-.option.correct:has(input:checked){
-    background:#e8f5ea;
-    border-color:#2e7d32;
-}
-
-.option.incorrect:has(input:checked){
-    background:#fdecec;
-    border-color:#c62828;
-}
-
-.feedback{
-    display:none;
-    margin-top:.6rem;
-    font-size:.92rem;
-}
-
-.option:has(input:checked) .feedback{
-    display:block;
-}
-</style>
-
-<details class="dlo">
-
-    <summary>
-
-        <!-- DLO icon -->
-        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="3" y="4" width="22" height="16" rx="3" stroke="#31546A" stroke-width="2"/>
-            <path d="M9 24H19" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
-            <path d="M14 20V24" stroke="#31546A" stroke-width="2"/>
-            <path d="M12 9L18 12L12 15V9Z" fill="#31546A"/>
-        </svg>
-
-        <div>
-            <div>Digital Learning Object</div>
-            <div style="font-size:.8rem;font-weight:normal;">
-                Branching classroom scenario
-            </div>
         </div>
 
-        <svg class="dlo-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18" stroke="#31546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
 
-    </summary>
-
-    <div class="dlo-body">
+        <!-- CLASSROOM SCENARIO -->
 
         <div class="scenario">
-            <strong>Scenario</strong>
+
+            <strong>
+                Classroom scenario
+            </strong>
+
             <p style="margin-top:.5rem;">
-                Maya is working quietly while the class completes an activity.
-                You are about to give an important instruction that everyone
-                needs to hear.
+                Maya is working quietly while the class completes
+                an activity. You are about to give an important
+                instruction that everyone needs to hear.
             </p>
-            <p><strong>What should you do first?</strong></p>
+
+            <p>
+                <strong>
+                    What should you do first?
+                </strong>
+            </p>
+
         </div>
+
 
         <div class="options">
 
+
             <label class="option incorrect">
-                <input type="radio" name="attention">
-                <strong>A.</strong> Begin speaking immediately while writing on the board.
+
+                <input type="radio"
+                       name="attention">
+
+                <strong>
+                    A.
+                </strong>
+
+                Begin speaking immediately while writing on
+                the board.
 
                 <div class="feedback">
-                    ❌ Important instructions should not begin while your face is turned away or before the student knows you are speaking.
+
+                    ❌ Important instructions should not begin
+                    while your face is turned away or before
+                    the student knows you are speaking.
+
                 </div>
+
             </label>
+
 
             <label class="option correct">
-                <input type="radio" name="attention">
-                <strong>B.</strong> Gain Maya's attention using her name or an agreed visual signal, then speak while facing the class.
+
+                <input type="radio"
+                       name="attention">
+
+                <strong>
+                    B.
+                </strong>
+
+                Gain Maya's attention using her name or an
+                agreed visual signal, then speak while facing
+                the class.
 
                 <div class="feedback">
-                    ✅ Correct. Getting the student's attention first ensures they are ready to receive the information and can access visual cues such as facial expression and lip movements.
+
+                    ✅ Correct. Getting the student's attention
+                    first ensures they are ready to receive
+                    the information and can access visual cues
+                    such as facial expression and lip movements.
+
                 </div>
+
             </label>
+
 
             <label class="option incorrect">
-                <input type="radio" name="attention">
-                <strong>C.</strong> Ask another student to repeat the instruction afterwards.
+
+                <input type="radio"
+                       name="attention">
+
+                <strong>
+                    C.
+                </strong>
+
+                Ask another student to repeat the instruction
+                afterwards.
 
                 <div class="feedback">
-                    ❌ This reduces independence and may result in incomplete or inaccurate information. Communicate directly with the student whenever possible.
+
+                    ❌ This reduces independence and may result
+                    in incomplete or inaccurate information.
+                    Communicate directly with the student
+                    whenever possible.
+
                 </div>
+
             </label>
 
+
         </div>
+
+
+        <!-- KEY TEACHING PRACTICE -->
+
+        <div class="key-practice">
+
+            <strong>
+                Key teaching practice
+            </strong>
+
+            <p>
+                Establish with the student how they prefer to have
+                their attention gained and use this consistently
+                before communicating important information
+                (Northern Ireland Department of Education, n.d.).
+            </p>
+
+            <ul>
+
+                <li>
+                    Use the student's name where appropriate.
+                </li>
+
+                <li>
+                    Use an agreed visual signal or gesture.
+                </li>
+
+                <li>
+                    Wait until the student is attending before
+                    beginning important communication.
+                </li>
+
+                <li>
+                    Avoid calling out repeatedly from across
+                    the classroom.
+                </li>
+
+                <li>
+                    Avoid beginning instructions while facing
+                    away from the class.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- RESEARCH AND RELATED LITERATURE -->
+
+    
+
+
+        <!-- TEACHER REFLECTION -->
+
+        <div class="key-practice">
+
+            <strong>
+                Reflect
+            </strong>
+
+            <p>
+                Think about your own classroom practice. Do you ever
+                begin speaking while students are still looking at
+                their books, working on the board, moving around the
+                room or talking with another student?
+            </p>
+
+            <p>
+                What simple change could you make to ensure that
+                students know when important communication is
+                about to begin?
+            </p>
+
+        </div>
+
 
     </div>
 
 </details>
 
-    </div>
+
+            <!-- =========================================
+                 DLO 2
+                 ========================================= -->
+
+   <!-- =========================================================
+     DLO 2
+     ========================================= -->
+
+<details class="dlo">
+
+    <summary>
+
+        <span class="dlo-number">
+            DLO 2
+        </span>
+
+        <span class="dlo-title">
+            Face the student when speaking
+        </span>
+
+        <svg class="dlo-arrow"
+             width="18"
+             height="18"
+             viewBox="0 0 24 24"
+             fill="none">
+
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+
+        </svg>
+
+    </summary>
 
 
-    <div class="strategy">            <span class="dlo-label">
-
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
-
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                   
-
-                </span>
+    <div class="dlo-body">
 
         <h3>
             Face the student when speaking
         </h3>
 
         <p>
-            Where the student's communication relies on visual information,
-            seeing the teacher's face can be important. Avoid speaking while
-            writing on the board, walking around the room, or covering your
-            mouth.
+            Where a student's communication relies on visual information,
+            seeing the teacher's face can be important. Teachers should
+            avoid speaking while writing on the board, walking around the
+            room, or covering their mouth, as these actions can reduce
+            students' visual access to communication
+            (Northern Ireland Department of Education, n.d.).
         </p>
 
-<!-- ===================================
-     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
-=================================== -->
 
-<style>
-.dlo{
-    margin:1.5rem 0;
-    border:1px solid #d9e3e8;
-    border-radius:10px;
-    overflow:hidden;
-    background:#fff;
-}
+        <!-- WHY THIS MATTERS -->
 
-.dlo summary{
-    list-style:none;
-    cursor:pointer;
-    padding:1rem 1.25rem;
-    background:#eef5f7;
-    display:flex;
-    align-items:center;
-    gap:.8rem;
-    font-weight:bold;
-    color:#243447;
-}
+        <div class="action-box">
 
-.dlo summary::-webkit-details-marker{
-    display:none;
-}
+            <h3>
+                Why does this matter?
+            </h3>
 
-.dlo summary:hover{
-    background:#e5f1f4;
-}
-
-.dlo-arrow{
-    margin-left:auto;
-    transition:transform .25s ease;
-}
-
-.dlo[open] .dlo-arrow{
-    transform:rotate(90deg);
-}
-
-.dlo-body{
-    padding:1.5rem;
-}
-
-.scenario{
-    background:#faf9f6;
-    border-left:4px solid #4f7c95;
-    padding:1rem;
-    border-radius:6px;
-    margin-bottom:1rem;
-}
-
-.options{
-    display:grid;
-    gap:.75rem;
-}
-
-.option{
-    border:1px solid #d8dee3;
-    border-radius:8px;
-    padding:1rem;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.option:hover{
-    border-color:#4f7c95;
-    background:#f8fbfc;
-}
-
-.option input{
-    display:none;
-}
-
-.option.correct:has(input:checked){
-    background:#e8f5ea;
-    border-color:#2e7d32;
-}
-
-.option.incorrect:has(input:checked){
-    background:#fdecec;
-    border-color:#c62828;
-}
-
-.feedback{
-    display:none;
-    margin-top:.6rem;
-    font-size:.92rem;
-}
-
-.option:has(input:checked) .feedback{
-    display:block;
-}
-</style>
-
-<details class="dlo">
-
-    <summary>
-
-        <!-- DLO icon -->
-        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <circle cx="14" cy="10" r="5" stroke="#31546A" stroke-width="2"/>
-            <path d="M5 24C5.8 18.8 9 16 14 16C19 16 22.2 18.8 23 24"
-                  stroke="#31546A" stroke-width="2"
-                  stroke-linecap="round"/>
-            <path d="M9 10H6" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
-            <path d="M22 10H19" stroke="#31546A" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-
-        <div>
-            <div>Digital Learning Object</div>
-            <div style="font-size:.8rem;font-weight:normal;">
-                Branching classroom scenario
-            </div>
-        </div>
-
-        <svg class="dlo-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18"
-                  stroke="#31546A"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"/>
-        </svg>
-
-    </summary>
-
-    <div class="dlo-body">
-
-        <div class="scenario">
-            <strong>Scenario</strong>
-
-            <p style="margin-top:.5rem;">
-                You are explaining an important task to the class. 
-                Some students rely on visual information to support their 
-                understanding of what you are saying.
+            <p>
+                For some students who are deaf or hard of hearing, visual
+                information can support access to spoken communication.
+                Facing the student provides access to facial expression,
+                mouth movements and other visual communication cues that
+                may contribute to understanding (Northern Ireland
+                Department of Education, n.d.; Marschark et al., 2011).
             </p>
 
             <p>
-                You need to continue writing instructions on the board 
+                In contrast, speaking while facing the board, moving around
+                the classroom or covering the mouth can make it more
+                difficult for a student to maintain visual access to the
+                teacher. These barriers can be particularly significant
+                when the teacher is providing new information, explaining
+                instructions or discussing important concepts.
+            </p>
+
+            <p>
+                This does not mean that teachers must remain completely
+                still or face the student at all times. Rather, teachers
+                should be conscious of when visual access is particularly
+                important and position themselves so that students can
+                clearly see them when communicating essential information.
+                This is part of creating an accessible classroom environment
+                without reducing the expectations placed on students.
+            </p>
+
+        </div>
+
+
+        <!-- CLASSROOM SCENARIO -->
+
+        <div class="scenario">
+
+            <strong>
+                Classroom scenario
+            </strong>
+
+            <p style="margin-top:.5rem;">
+                You are explaining an important task to the class.
+                Some students rely on visual information to support
+                their understanding.
+            </p>
+
+            <p>
+                You need to continue writing instructions on the board
                 while explaining the task.
             </p>
 
             <p>
-                <strong>What is the most accessible approach?</strong>
+                <strong>
+                    What is the most accessible approach?
+                </strong>
             </p>
+
         </div>
+
 
         <div class="options">
 
+
             <label class="option correct">
-                <input type="radio" name="face-speaking">
 
-                <strong>A.</strong>
-                Stop writing, turn towards the students, and speak while 
-                facing the class.
+                <input type="radio"
+                       name="face-speaking">
+
+                <strong>
+                    A.
+                </strong>
+
+                Stop writing, turn towards the students, and
+                speak while facing the class.
 
                 <div class="feedback">
-                    ✅ Correct. Facing the student allows them to access 
-                    important visual information, including facial expression 
-                    and other communication cues. Give important instructions 
-                    while facing the class whenever possible.
+
+                    ✅ Correct. Facing the student allows them
+                    to access important visual information,
+                    including facial expression and other
+                    communication cues. Give important
+                    instructions while facing the class
+                    whenever possible (Northern Ireland
+                    Department of Education, n.d.).
+
                 </div>
+
             </label>
 
-            <label class="option incorrect">
-                <input type="radio" name="face-speaking">
 
-                <strong>B.</strong>
-                Continue writing while speaking because students can hear 
-                the instructions.
+            <label class="option incorrect">
+
+                <input type="radio"
+                       name="face-speaking">
+
+                <strong>
+                    B.
+                </strong>
+
+                Continue writing while speaking because students
+                can hear the instructions.
 
                 <div class="feedback">
-                    ❌ Not the most accessible approach. Hearing the words 
-                    may not provide enough information for students who rely 
-                    on visual communication cues. Avoid speaking while your 
-                    face is turned away.
+
+                    ❌ Not the most accessible approach. Hearing
+                    the words may not provide enough information
+                    for students who rely on visual communication
+                    cues. Avoid speaking while your face is
+                    turned away.
+
                 </div>
+
             </label>
 
-            <label class="option incorrect">
-                <input type="radio" name="face-speaking">
 
-                <strong>C.</strong>
-                Walk around the classroom while giving the instructions 
-                so you can reach everyone.
+            <label class="option incorrect">
+
+                <input type="radio"
+                       name="face-speaking">
+
+                <strong>
+                    C.
+                </strong>
+
+                Walk around the classroom while giving the
+                instructions so you can reach everyone.
 
                 <div class="feedback">
-                    ❌ Moving around can make it harder for students to 
-                    maintain visual access to your face. When communicating 
-                    important information, remain in a position where 
+
+                    ❌ Moving around can make it harder for
+                    students to maintain visual access to your
+                    face. When communicating important
+                    information, remain in a position where
                     students can clearly see you.
+
                 </div>
+
             </label>
+
 
         </div>
+
+
+        <!-- KEY TEACHING PRACTICE -->
+
+        <div class="key-practice">
+
+            <strong>
+                Key teaching practice
+            </strong>
+
+            <p>
+                Position yourself so that students who rely on visual
+                information can clearly see your face when you are
+                communicating important information
+                (Northern Ireland Department of Education, n.d.).
+            </p>
+
+            <ul>
+
+                <li>
+                    Face the class when giving important instructions.
+                </li>
+
+                <li>
+                    Stop writing on the board when speaking about
+                    important information.
+                </li>
+
+                <li>
+                    Avoid covering your mouth when communicating.
+                </li>
+
+                <li>
+                    Avoid speaking while walking away from students.
+                </li>
+
+                <li>
+                    Consider your position, lighting and visibility
+                    when communicating.
+                </li>
+
+                <li>
+                    Allow students to indicate if they need you to
+                    reposition yourself or repeat information.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONNECTION TO INCLUSIVE PRACTICE -->
+
+        <div class="action-box">
+
+            <h3>
+                Beyond "facing the student"
+            </h3>
+
+            <p>
+                Facing the student is one part of a broader approach to
+                accessible classroom communication. Teachers also need
+                to consider lighting, classroom position, background
+                distractions, the distance between teacher and student,
+                and whether other people are speaking at the same time
+                (Mealings et al., 2025).
+            </p>
+
+            <p>
+                These factors can interact with one another. For example,
+                a student may be able to see the teacher clearly but still
+                experience difficulty accessing communication if the
+                teacher is moving frequently, the room is poorly lit, or
+                several students are speaking simultaneously. Effective
+                practice therefore involves considering the whole
+                communication environment rather than relying on a single
+                adjustment.
+            </p>
+
+            <p>
+                Most importantly, teachers should recognise that students
+                who are deaf or hard of hearing have different communication
+                preferences and needs. The most appropriate approach should
+                be discussed with the individual student and, where
+                appropriate, their family and relevant support professionals
+                (Marschark et al., 2011).
+            </p>
+
+        </div>
+
+
+        <!-- QUICK REFLECTION -->
+
+        <div class="key-practice">
+
+            <strong>
+                Reflect
+            </strong>
+
+            <p>
+                Think about where you normally stand when giving
+                instructions. Are you facing the class, writing on the
+                board, moving around the room, or standing in a position
+                where some students may have difficulty seeing you?
+            </p>
+
+            <p>
+                What could you change about your position or movement to
+                improve students' visual access to your communication?
+            </p>
+
+        </div>
+
 
     </div>
 
 </details>
 
 
+            <!-- =========================================
+                 DLO 3
+                 ========================================= -->
 
-</div>
+      <!-- =========================================================
+     DLO 3
+     ========================================= -->
 
-<script>
-function checkDLO() {
+<details class="dlo">
 
-    const answer = document.querySelector('input[name="teacher"]:checked');
+    <summary>
 
-    document.getElementById("correct").style.display = "none";
-    document.getElementById("incorrect").style.display = "none";
+        <span class="dlo-number">
+            DLO 3
+        </span>
 
-    if (!answer) {
-        alert("Please choose an answer first.");
-        return;
-    }
+        <span class="dlo-title">
+            Make instructions visible
+        </span>
 
-    if (answer.value === "b") {
-        document.getElementById("correct").style.display = "block";
-    } else {
-        document.getElementById("incorrect").style.display = "block";
-    }
-}
-</script>
+        <svg class="dlo-arrow"
+             width="18"
+             height="18"
+             viewBox="0 0 24 24"
+             fill="none">
 
-    </div>
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+
+        </svg>
+
+    </summary>
 
 
-    <div class="strategy">
-                    <span class="dlo-label">
-
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
-
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                   
-
-                </span>
+    <div class="dlo-body">
 
         <h3>
             Make instructions visible
@@ -1126,167 +730,71 @@ function checkDLO() {
             Provide important instructions in a visual form as well as
             verbally. Written instructions, diagrams, key vocabulary,
             worked examples and lesson outlines can reduce the need for
-            students to rely on hearing information alone.
+            students to rely on hearing information alone
+            (Northern Ireland Department of Education, n.d.).
         </p>
 
-<!-- ===================================
-     DIGITAL LEARNING OBJECT (COLLAPSIBLE)
-=================================== -->
+        <p>
+            Providing information through multiple modes can also support
+            students to revisit information at their own pace. Rather than
+            requiring students to remember a sequence of instructions that
+            was communicated verbally, visual information can remain
+            available throughout the learning activity
+            (Department for Education, Government of South Australia, n.d.).
+        </p>
 
-<style>
-.dlo{
-    margin:1.5rem 0;
-    border:1px solid #d9e3e8;
-    border-radius:10px;
-    overflow:hidden;
-    background:#fff;
-}
 
-.dlo summary{
-    list-style:none;
-    cursor:pointer;
-    padding:1rem 1.25rem;
-    background:#eef5f7;
-    display:flex;
-    align-items:center;
-    gap:.8rem;
-    font-weight:bold;
-    color:#243447;
-}
+        <!-- WHY THIS MATTERS -->
 
-.dlo summary::-webkit-details-marker{
-    display:none;
-}
+        <div class="action-box">
 
-.dlo summary:hover{
-    background:#e5f1f4;
-}
+            <h3>
+                Why does this matter?
+            </h3>
 
-.dlo-arrow{
-    margin-left:auto;
-    transition:transform .25s ease;
-}
+            <p>
+                Classroom learning frequently depends on spoken instructions.
+                Teachers may explain what students need to do, introduce new
+                vocabulary, describe a process or provide additional information
+                while students are expected to begin working. For students who
+                are deaf or hard of hearing, relying on spoken information alone
+                can create a barrier to accessing this information.
+            </p>
 
-.dlo[open] .dlo-arrow{
-    transform:rotate(90deg);
-}
+            <p>
+                Providing an equivalent visual form gives students another
+                pathway to access important information. This might include
+                written instructions, diagrams, images, key vocabulary,
+                demonstrations, worked examples, lesson outlines or visual
+                sequences (Northern Ireland Department of Education, n.d.).
+            </p>
 
-.dlo-body{
-    padding:1.5rem;
-}
+            <p>
+                Visual supports are also useful because they remain available
+                after the teacher has finished speaking. Students can return
+                to the instructions while completing the task rather than
+                needing to rely entirely on memory or ask for the information
+                to be repeated.
+            </p>
 
-.scenario{
-    background:#faf9f6;
-    border-left:4px solid #4f7c95;
-    padding:1rem;
-    border-radius:6px;
-    margin-bottom:1.25rem;
-}
+            <p>
+                This approach is consistent with inclusive teaching principles
+                because the teacher is not lowering the learning expectations.
+                Instead, the teacher is providing different ways for students
+                to access the same learning intention and classroom activity
+                (Department of Education, 2026).
+            </p>
 
-.choice-group{
-    display:grid;
-    gap:.75rem;
-}
-
-.choice{
-    position:relative;
-}
-
-.choice input{
-    position:absolute;
-    opacity:0;
-}
-
-.choice label{
-    display:block;
-    border:1px solid #d8dee3;
-    border-radius:8px;
-    padding:1rem;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.choice label:hover{
-    border-color:#4f7c95;
-    background:#f8fbfc;
-}
-
-.choice input:checked + label{
-    background:#e8f5ea;
-    border-color:#2e7d32;
-}
-
-.choice-icon{
-    font-size:1.2rem;
-    margin-right:.5rem;
-}
-
-.explanation{
-    margin-top:1.25rem;
-    padding:1rem;
-    background:#eef5f7;
-    border-radius:8px;
-    font-size:.92rem;
-    line-height:1.5;
-}
-
-.key-practice{
-    margin-top:1rem;
-    padding:1rem;
-    border-radius:8px;
-    background:#faf9f6;
-}
-
-.key-practice strong{
-    color:#31546A;
-}
-</style>
-
-<details class="dlo">
-
-    <summary>
-
-        <!-- DLO icon -->
-        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="4" width="20" height="16" rx="2"
-                  stroke="#31546A" stroke-width="2"/>
-            <path d="M8 9H20"
-                  stroke="#31546A" stroke-width="2"
-                  stroke-linecap="round"/>
-            <path d="M8 13H16"
-                  stroke="#31546A" stroke-width="2"
-                  stroke-linecap="round"/>
-            <path d="M8 17H18"
-                  stroke="#31546A" stroke-width="2"
-                  stroke-linecap="round"/>
-            <path d="M10 24H18"
-                  stroke="#31546A" stroke-width="2"
-                  stroke-linecap="round"/>
-        </svg>
-
-        <div>
-            <div>Digital Learning Object</div>
-            <div style="font-size:.8rem;font-weight:normal;">
-                Build a visually accessible lesson
-            </div>
         </div>
 
-        <svg class="dlo-arrow" width="18" height="18"
-             viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18"
-                  stroke="#31546A"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"/>
-        </svg>
 
-    </summary>
-
-    <div class="dlo-body">
+        <!-- CLASSROOM SCENARIO -->
 
         <div class="scenario">
 
-            <strong>Classroom scenario</strong>
+            <strong>
+                Classroom scenario
+            </strong>
 
             <p style="margin-top:.5rem;">
                 You are introducing a new activity. The task has several
@@ -1299,495 +807,1513 @@ function checkDLO() {
             </p>
 
             <p>
-                <strong>Which lesson setup provides the strongest visual support?</strong>
+                <strong>
+                    Which lesson setup provides the strongest visual support?
+                </strong>
             </p>
 
         </div>
+
 
         <div class="choice-group">
 
+
             <div class="choice">
-                <input type="radio" name="visual-support" id="visual-a">
+
+                <input type="radio"
+                       name="visual-support"
+                       id="visual-a">
 
                 <label for="visual-a">
-                    <span class="choice-icon">🗣️</span>
-                    <strong>A.</strong>
-                    Explain the task verbally and ask students to listen
-                    carefully.
+
+                    <span class="choice-icon">
+                        🗣️
+                    </span>
+
+                    <strong>
+                        A.
+                    </strong>
+
+                    Explain the task verbally and ask students
+                    to listen carefully.
+
                 </label>
+
             </div>
 
+
             <div class="choice">
-                <input type="radio" name="visual-support" id="visual-b">
+
+                <input type="radio"
+                       name="visual-support"
+                       id="visual-b">
 
                 <label for="visual-b">
-                    <span class="choice-icon">📝</span>
-                    <strong>B.</strong>
-                    Explain the task verbally while displaying the key
-                    instructions, vocabulary and a worked example.
+
+                    <span class="choice-icon">
+                        📝
+                    </span>
+
+                    <strong>
+                        B.
+                    </strong>
+
+                    Explain the task verbally while displaying
+                    the key instructions, vocabulary and a
+                    worked example.
+
                 </label>
+
             </div>
+
 
             <div class="choice">
-                <input type="radio" name="visual-support" id="visual-c">
+
+                <input type="radio"
+                       name="visual-support"
+                       id="visual-c">
 
                 <label for="visual-c">
-                    <span class="choice-icon">📄</span>
-                    <strong>C.</strong>
-                    Give students a written copy of the instructions
-                    after explaining the task.
+
+                    <span class="choice-icon">
+                        📄
+                    </span>
+
+                    <strong>
+                        C.
+                    </strong>
+
+                    Give students a written copy of the
+                    instructions after explaining the task.
+
                 </label>
+
             </div>
 
+
         </div>
+
+
+        <!-- EXPLANATION -->
 
         <div class="explanation">
-            <strong>Why visual information matters</strong>
+
+            <strong>
+                Why is B the strongest approach?
+            </strong>
 
             <p style="margin-top:.5rem;">
-                Providing information visually as well as verbally gives
-                students another way to access and revisit important
-                information. This can include written instructions,
-                diagrams, key vocabulary, worked examples and lesson
-                outlines.
+                Providing the information visually while explaining it
+                verbally gives students an immediate alternative way to
+                access the information. The visual information can also
+                remain available while students work
+                (Northern Ireland Department of Education, n.d.).
             </p>
 
             <p style="margin-top:.5rem;">
-                Visual information can remain available while students
-                are working, reducing the need to remember everything
-                that was communicated verbally.
+                Option C provides written information, but only after the
+                explanation has already occurred. This means the student
+                may still have missed important information during the
+                original explanation.
             </p>
+
+            <p style="margin-top:.5rem;">
+                Option A relies primarily on listening and places greater
+                responsibility on the student to access and remember the
+                spoken information.
+            </p>
+
         </div>
 
+
+        <!-- TYPES OF VISUAL SUPPORT -->
+
         <div class="key-practice">
-            <strong>Try this in your classroom</strong>
+
+            <strong>
+                What can "making instructions visible" look like?
+            </strong>
+
+            <ul>
+
+                <li>
+                    <strong>Written instructions:</strong>
+                    Provide a short, numbered sequence of what students
+                    need to do.
+                </li>
+
+                <li>
+                    <strong>Diagrams and images:</strong>
+                    Represent processes, relationships or concepts visually.
+                </li>
+
+                <li>
+                    <strong>Key vocabulary:</strong>
+                    Display important subject-specific words and their
+                    meanings.
+                </li>
+
+                <li>
+                    <strong>Worked examples:</strong>
+                    Show students what a completed task or process looks like.
+                </li>
+
+                <li>
+                    <strong>Lesson outlines:</strong>
+                    Make the structure and sequence of the lesson visible.
+                </li>
+
+                <li>
+                    <strong>Demonstrations:</strong>
+                    Show a process or skill rather than relying entirely
+                    on verbal explanation.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- LINK TO LEARNING -->
+
+        <div class="action-box">
+
+            <h3>
+                Visual information supports independence
+            </h3>
+
+            <p>
+                A key benefit of keeping instructions visible is that it can
+                support student independence. When instructions remain
+                accessible, students can check what they need to do without
+                necessarily waiting for the teacher to repeat the information.
+            </p>
+
+            <p>
+                This can be particularly useful during practical, collaborative
+                or multi-step activities where students need to move between
+                different stages of a task. Visual supports can provide a
+                consistent reference point throughout the lesson rather than
+                requiring students to retain a lengthy verbal explanation.
+            </p>
+
+            <p>
+                Visual supports should therefore be considered more than an
+                accommodation added specifically for one student. They can
+                provide useful access to information for the whole class while
+                particularly reducing barriers for students who have difficulty
+                accessing spoken information
+                (Department of Education, 2026).
+            </p>
+
+        </div>
+
+
+        <!-- KEY TEACHING PRACTICE -->
+
+        <div class="key-practice">
+
+            <strong>
+                Try this in your classroom
+            </strong>
 
             <p style="margin-top:.5rem;">
                 When giving important instructions, ask yourself:
-                <em>“Could a student understand what to do if they
-                missed part of what I said?”</em>
+                <em>
+                    "Could a student understand what to do if they missed
+                    part of what I said?"
+                </em>
             </p>
 
             <p style="margin-top:.5rem;">
                 If not, add a visual support such as a short written
                 sequence, diagram, key words, example or lesson outline.
             </p>
+
+            <p style="margin-top:.5rem;">
+                The aim is not to replace spoken communication, but to
+                provide students with another reliable way to access and
+                revisit important information.
+            </p>
+
         </div>
+
+
+        <!-- REFLECTION -->
+
+        <div class="key-practice">
+
+            <strong>
+                Reflect
+            </strong>
+
+            <p>
+                Think about the last lesson you taught. What information
+                did students need to remember from your verbal explanation?
+            </p>
+
+            <p>
+                How could you make that information visible so that students
+                could refer back to it independently?
+            </p>
+
+        </div>
+
 
     </div>
 
 </details>
 
+            <!-- =========================================
+                 DLO 4
+                 ========================================= -->
 
+            <details class="dlo">
 
-    </div>
+                <summary>
 
+                    <span class="dlo-number">
+                        DLO 4
+                    </span>
 
-    <div class="strategy">
-                    <span class="dlo-label">
+                    <span class="dlo-title">
+                        Consider the classroom environment
+                    </span>
 
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
+                    <svg class="dlo-arrow"
+                         width="18"
+                         height="18"
+                         viewBox="0 0 24 24"
+                         fill="none">
 
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
-
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
+                        <path d="M9 6L15 12L9 18"
+                              stroke="#31546A"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
 
                     </svg>
 
-                   
+                </summary>
 
-                </span>
+
+                <div class="dlo-body">
+
+                    <h3>
+                        Consider the classroom environment
+                    </h3>
+
+                    <p>
+                        The classroom environment is one driving force behind
+                        the challenges faced by students who are deaf or hard
+                        of hearing. Hear For You (2020) explore this notion,
+                        stating that classroom arrangement (seating
+                        arrangement, lighting, and overall classroom
+                        organisation) directly influences the learning
+                        experiences and capabilities of deaf and hard of
+                        hearing students.
+                    </p>
+
+                    <p>
+                        Mealings et al. (2025) further explores how teachers'
+                        arrangement of their classroom environment can result
+                        in students who are deaf or hard of hearing
+                        experiencing challenges through greater background
+                        noise, competing speakers, poor acoustics, teacher
+                        distance and movement, missing spoken information,
+                        listening fatigue, and reduced support, confidence
+                        and social inclusion.
+                    </p>
+
+
+                    <div class="strategy">
+
+                        <h3>
+                            Background noise and competing speakers
+                        </h3>
+
+                        <p>
+                            Classroom noise makes it very difficult for
+                            students who are deaf or hard of hearing to hear,
+                            understand and engage with spoken information
+                            from the lesson. Mealings et al. (2025) outline
+                            how this becomes especially problematic during
+                            group and guided learning activities as multiple
+                            students and groups may be talking at once.
+                        </p>
+
+                    </div>
+
+
+                    <div class="strategy">
+
+                        <h3>
+                            Poor acoustics and teacher distance/movement
+                        </h3>
+
+                        <p>
+                            Spoken information is further impacted by echoes,
+                            reverberations, and teacher movement around the
+                            room. These factors all affect clarity of teacher
+                            speech. Mealings et al. (2025) builds on this,
+                            emphasising how clarity of speech and teacher
+                            distance and movement were among the strongest
+                            environmental factors challenging students who
+                            are deaf or hard of hearing ability to listen,
+                            understand and engage with classroom learning.
+                        </p>
+
+                    </div>
+
+
+                    <div class="video-intro">
+
+                        <h3>
+                            Improving hearing and listening in the classroom
+                        </h3>
+
+                        <p>
+                            Watch the video and consider how classroom design,
+                            positioning and environmental factors can influence
+                            access to spoken information.
+                        </p>
+
+
+                        <div class="video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/oLRKuXTJLAA"
+                                title="Improving hearing and listening in the Classroom"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="scenario">
+
+                        <strong>
+                            Watch and notice
+                        </strong>
+
+                        <p style="margin-top:.5rem;">
+                            As you watch the video, identify the environmental
+                            factors that could make listening more difficult
+                            for a student who is deaf or hard of hearing.
+                        </p>
+
+                    </div>
+
+
+                    <div class="choice-group">
+
+
+                        <div class="choice">
+
+                            <input type="checkbox"
+                                   id="environment-noise">
+
+                            <label for="environment-noise">
+                                🔊 Background noise
+                            </label>
+
+                        </div>
+
+
+                        <div class="choice">
+
+                            <input type="checkbox"
+                                   id="environment-speakers">
+
+                            <label for="environment-speakers">
+                                👥 Several people speaking at once
+                            </label>
+
+                        </div>
+
+
+                        <div class="choice">
+
+                            <input type="checkbox"
+                                   id="environment-acoustics">
+
+                            <label for="environment-acoustics">
+                                🏫 Poor classroom acoustics
+                            </label>
+
+                        </div>
+
+
+                        <div class="choice">
+
+                            <input type="checkbox"
+                                   id="environment-distance">
+
+                            <label for="environment-distance">
+                                🚶 Teacher distance and movement
+                            </label>
+
+                        </div>
+
+
+                        <div class="choice">
+
+                            <input type="checkbox"
+                                   id="environment-lighting">
+
+                            <label for="environment-lighting">
+                                💡 Lighting and visibility
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="explanation">
+
+                        <strong>
+                            Why the environment matters
+                        </strong>
+
+                        <p style="margin-top:.5rem;">
+                            Environmental factors can increase the effort
+                            required to listen and understand classroom
+                            communication. Reducing unnecessary noise,
+                            improving positioning and considering acoustics
+                            can therefore support access to learning.
+                        </p>
+
+                    </div>
+
+
+                    <div class="key-practice">
+
+                        <strong>
+                            Teacher action checklist
+                        </strong>
+
+                        <p style="margin-top:.5rem;">
+                            Consider whether the student has a clear view
+                            of the teacher and other speakers, whether
+                            background noise can be reduced, and whether
+                            the classroom arrangement supports comfortable
+                            listening.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </details>
+
+
+            <!-- =========================================
+                 DLO 5
+                 ========================================= -->
+<!-- =========================================================
+     DLO 5
+     ========================================= -->
+
+<details class="dlo">
+
+    <summary>
+
+        <span class="dlo-number">
+            DLO 5
+        </span>
+
+        <span class="dlo-title">
+            Manage classroom discussion
+        </span>
+
+        <svg class="dlo-arrow"
+             width="18"
+             height="18"
+             viewBox="0 0 24 24"
+             fill="none">
+
+            <path d="M9 6L15 12L9 18"
+                  stroke="#31546A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+
+        </svg>
+
+    </summary>
+
+
+    <div class="dlo-body">
 
         <h3>
             Manage classroom discussion
         </h3>
 
         <p>
-            Make it clear who is speaking during class discussion. Encourage
-            students to speak one at a time and repeat or summarise important
-            contributions when necessary. This can be particularly important
-            when students are working in groups or when several people are
-            speaking from different parts of the room.
+            Make it clear who is speaking during class discussion.
+            Encourage students to speak one at a time and repeat
+            or summarise important contributions when necessary.
+            This can be particularly important when students are
+            working in groups or when several people are speaking
+            from different parts of the room
+            (Northern Ireland Department of Education, n.d.).
         </p>
+
+
+        <!-- WHY THIS MATTERS -->
+
+        <div class="action-box">
+
+            <h3>
+                Why does this matter?
+            </h3>
+
+            <p>
+                Classroom discussion can create additional challenges
+                for students who are deaf or hard of hearing because
+                communication may involve multiple speakers, rapid
+                changes between speakers and information coming from
+                different locations around the classroom. These factors
+                can make it difficult to identify who is speaking and
+                follow the flow of the discussion
+                (Mealings et al., 2025).
+            </p>
+
+            <p>
+                The challenge can become greater during group work or
+                whole-class discussion when students speak over one
+                another. Background noise and competing speakers can
+                increase the effort required to listen and understand
+                spoken information, potentially affecting participation
+                and access to learning (Mealings et al., 2025).
+            </p>
+
+            <p>
+                Teachers can reduce these barriers by establishing clear
+                turn-taking, identifying speakers and repeating or
+                summarising important contributions. These practices
+                make the structure of classroom communication more
+                predictable and provide students with additional
+                opportunities to access important information
+                (Northern Ireland Department of Education, n.d.).
+            </p>
+
+        </div>
+
+
+        <!-- CLASSROOM SCENARIO -->
+
+        <div class="scenario">
+
+            <strong>
+                Classroom scenario
+            </strong>
+
+            <p style="margin-top:.5rem;">
+                You are facilitating a whole-class discussion.
+                Several students begin responding at the same
+                time, while other students are talking in small
+                groups around the room.
+            </p>
+
+            <p>
+                <strong>
+                    Which approach would make the discussion
+                    more accessible?
+                </strong>
+            </p>
+
+        </div>
+
+
+        <div class="options">
+
+
+            <label class="option correct">
+
+                <input type="radio"
+                       name="discussion">
+
+                <strong>
+                    A.
+                </strong>
+
+                Establish who is speaking, encourage one speaker
+                at a time, and repeat or summarise important
+                contributions.
+
+                <div class="feedback">
+
+                    ✅ Correct. Clear turn-taking and repetition
+                    or summarising can make it easier to identify
+                    and access important contributions. Structuring
+                    classroom discussion is a shared responsibility
+                    of the teacher rather than something the student
+                    should have to manage independently.
+
+                </div>
+
+            </label>
+
+
+            <label class="option incorrect">
+
+                <input type="radio"
+                       name="discussion">
+
+                <strong>
+                    B.
+                </strong>
+
+                Allow everyone to continue speaking because
+                students can work out what is being said.
+
+                <div class="feedback">
+
+                    ❌ Multiple speakers can make it very difficult
+                    to identify and follow spoken information,
+                    particularly when students rely on visual
+                    or listening cues. Competing speakers and
+                    background noise can increase the difficulty
+                    of accessing classroom communication
+                    (Mealings et al., 2025).
+
+                </div>
+
+            </label>
+
+
+            <label class="option incorrect">
+
+                <input type="radio"
+                       name="discussion">
+
+                <strong>
+                    C.
+                </strong>
+
+                Ask the student who is deaf or hard of hearing
+                to sit closer to the group and manage the
+                discussion themselves.
+
+                <div class="feedback">
+
+                    ❌ Accessibility is a shared classroom
+                    responsibility. Simply moving the student
+                    closer does not address the broader issue
+                    of multiple speakers and unclear turn-taking.
+                    The teacher should structure discussion so
+                    that all students can participate.
+
+                </div>
+
+            </label>
+
+
+        </div>
+
+
+        <!-- KEY TEACHING PRACTICE -->
+
+        <div class="key-practice">
+
+            <strong>
+                Key teaching practice
+            </strong>
+
+            <p>
+                Structure classroom discussion so that students can
+                identify who is speaking and follow important
+                contributions. This is particularly important when
+                several students are participating
+                (Northern Ireland Department of Education, n.d.;
+                Mealings et al., 2025).
+            </p>
+
+            <ul>
+
+                <li>
+                    Establish clear turn-taking.
+                </li>
+
+                <li>
+                    Encourage students to speak one at a time.
+                </li>
+
+                <li>
+                    Identify or acknowledge who is speaking where
+                    necessary.
+                </li>
+
+                <li>
+                    Repeat or summarise important student contributions.
+                </li>
+
+                <li>
+                    Reduce unnecessary background conversations
+                    during important discussion.
+                </li>
+
+                <li>
+                    Ensure students can see the person speaking
+                    where visual access is important.
+                </li>
+
+                <li>
+                    Check that important information has been
+                    communicated clearly before moving on.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- GROUP WORK -->
+
+        <div class="action-box">
+
+            <h3>
+                Group work and multiple speakers
+            </h3>
+
+            <p>
+                Group work can be particularly challenging because
+                students may speak from different positions, turn
+                towards one another, speak simultaneously or move
+                around the room. Mealings et al. (2025) identifies
+                competing speakers, background noise and teacher
+                distance and movement as environmental factors that
+                can affect the listening experiences of students who
+                are deaf or hard of hearing.
+            </p>
+
+            <p>
+                Teachers can make group activities more accessible by
+                explicitly teaching students how to take turns, reducing
+                unnecessary background noise and establishing routines
+                for identifying the current speaker. These strategies
+                can benefit the whole class while reducing barriers for
+                students who have difficulty accessing multiple speakers.
+            </p>
+
+            <p>
+                Importantly, the goal is not to prevent natural
+                classroom interaction. Rather, teachers can structure
+                interaction so that students have equitable opportunities
+                to contribute and access the ideas of their peers.
+            </p>
+
+        </div>
+
+
+        <!-- REPEAT AND SUMMARISE -->
+
+        <div class="key-practice">
+
+            <strong>
+                Repeat and summarise
+            </strong>
+
+            <p>
+                When a student makes an important contribution, consider
+                briefly repeating or summarising the key idea before
+                moving to the next speaker. This can help ensure that
+                important information is clearly available to the whole
+                class and can provide another opportunity to access the
+                contribution (Northern Ireland Department of Education,
+                n.d.).
+            </p>
+
+            <p>
+                This practice can also strengthen learning for all
+                students by highlighting the key idea and connecting
+                individual contributions to the broader lesson.
+            </p>
+
+        </div>
+
+
+        <!-- REFLECTION -->
+
+        <div class="key-practice">
+
+            <strong>
+                Reflect
+            </strong>
+
+            <p>
+                Think about the last whole-class discussion or group
+                activity you facilitated.
+            </p>
+
+            <p>
+                How easy would it have been for a student to identify
+                who was speaking, follow each contribution and know
+                which ideas were important?
+            </p>
+
+            <p>
+                What could you change about turn-taking, positioning,
+                background noise or summarising to make the discussion
+                more accessible?
+            </p>
+
+        </div>
+
 
     </div>
 
+</details>
 
-    <div class="strategy">
-                    <span class="dlo-label">
+            <!-- =========================================
+                 DLO 6
+                 ========================================= -->
 
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
+            <details class="dlo">
 
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
+                <summary>
 
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
+                    <span class="dlo-number">
+                        DLO 6
+                    </span>
 
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
+                    <span class="dlo-title">
+                        Check understanding without singling the student out
+                    </span>
 
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
+                    <svg class="dlo-arrow"
+                         width="18"
+                         height="18"
+                         viewBox="0 0 24 24"
+                         fill="none">
+
+                        <path d="M9 6L15 12L9 18"
+                              stroke="#31546A"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
 
                     </svg>
 
-                   
-
-                </span>
-
-        <h3>
-            Consider the classroom environment
-        </h3>
-
-        <p>
-            Think about where the student is seated, the position of the
-            teacher, lighting, background noise and the location of other
-            speakers. Small environmental changes can make it easier for
-            students to access communication and reduce listening effort.
-        </p>
-
-    </div>
+                </summary>
 
 
-    <div class="strategy">
-                    <span class="dlo-label">
+                <div class="dlo-body">
 
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
+                    <h3>
+                        Check understanding without singling the student out
+                    </h3>
 
-                        <rect
-                            x="3"
-                            y="4"
-                            width="22"
-                            height="16"
-                            rx="3"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
+                    <p>
+                        Build regular opportunities for all students to check
+                        and demonstrate their understanding. Avoid assuming
+                        that a student has understood simply because they
+                        appear to be listening. Encourage questions and provide
+                        alternative ways to revisit information when needed.
+                    </p>
 
-                        <path
-                            d="M9 24H19"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        />
 
-                        <path
-                            d="M14 20V24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
+                    <div class="scenario">
 
-                        <path
-                            d="M12 9L18 12L12 15V9Z"
-                            fill="currentColor"
-                        />
+                        <strong>
+                            Classroom scenario
+                        </strong>
+
+                        <p style="margin-top:.5rem;">
+                            You have just explained a new activity. You want
+                            to make sure everyone understands what they need
+                            to do, including a student who is deaf or hard
+                            of hearing.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Which approach is most inclusive?
+                            </strong>
+                        </p>
+
+                    </div>
+
+
+                    <div class="options">
+
+
+                        <label class="option correct">
+
+                            <input type="radio"
+                                   name="understanding">
+
+                            <strong>
+                                A.
+                            </strong>
+
+                            Provide opportunities for the whole class to
+                            demonstrate understanding and revisit the
+                            information in different ways.
+
+                            <div class="feedback">
+
+                                ✅ Correct. Checking understanding across
+                                the whole class avoids singling out
+                                individual students and provides multiple
+                                opportunities to clarify or revisit
+                                information.
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="option incorrect">
+
+                            <input type="radio"
+                                   name="understanding">
+
+                            <strong>
+                                B.
+                            </strong>
+
+                            Assume the student understands if they appear
+                            to be watching and listening.
+
+                            <div class="feedback">
+
+                                ❌ Appearance does not necessarily indicate
+                                understanding. Students may miss information
+                                even when they appear to be attentive.
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="option incorrect">
+
+                            <input type="radio"
+                                   name="understanding">
+
+                            <strong>
+                                C.
+                            </strong>
+
+                            Ask only the student who is deaf or hard of
+                            hearing to repeat the instructions.
+
+                            <div class="feedback">
+
+                                ❌ Singling out one student can be
+                                uncomfortable and suggests that accessibility
+                                is their responsibility. Understanding should
+                                be checked across the class.
+
+                            </div>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <div class="key-practice">
+
+                        <strong>
+                            Try this in your classroom
+                        </strong>
+
+                        <p style="margin-top:.5rem;">
+                            Use strategies such as visual prompts, written
+                            instructions, demonstrations, examples and
+                            opportunities for students to ask questions or
+                            revisit information.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </details>
+
+
+            <!-- =========================================
+                 DLO 7
+                 ========================================= -->
+
+            <details class="dlo">
+
+                <summary>
+
+                    <span class="dlo-number">
+                        DLO 7
+                    </span>
+
+                    <span class="dlo-title">
+                        Incorporate sign languages into classrooms
+                    </span>
+
+                    <svg class="dlo-arrow"
+                         width="18"
+                         height="18"
+                         viewBox="0 0 24 24"
+                         fill="none">
+
+                        <path d="M9 6L15 12L9 18"
+                              stroke="#31546A"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
 
                     </svg>
 
-                   
+                </summary>
 
-                </span>
 
-        <h3>
-            Check understanding without singling the student out
-        </h3>
+                <div class="dlo-body">
+
+                    <h3>
+                        Incorporating Sign Languages into Classrooms
+                    </h3>
+
+                    <p>
+                        Sign language can be an important part of language,
+                        identity and education for some students who are deaf
+                        or hard of hearing. Communication preferences vary
+                        considerably between students, so teachers should
+                        avoid assuming that every Deaf student uses Auslan.
+                        Instead, schools should work with students, families
+                        and relevant Deaf education professionals to understand
+                        the student's preferred language and communication
+                        methods.
+                    </p>
+
+
+                    <div class="strategy">
+
+                        <h3>
+                            Auslan K–10 Syllabus (2023)
+                        </h3>
+
+                        <p>
+                            NSW introduced the Auslan K–10 Syllabus in 2023.
+                            Implementation commenced in 2026, giving NSW
+                            schools the opportunity to offer Auslan within
+                            K–6 language programs, as the selected language
+                            for the mandatory 100 hours of language study
+                            in Years 7–10, and as a Stage 5 language elective.
+                        </p>
+
+                        <p>
+                            The syllabus recognises Auslan as a distinct
+                            language with its own grammar and vocabulary
+                            and emphasises the relationship between language,
+                            culture and identity. It also highlights the
+                            importance of consultation with the Deaf community
+                            when Auslan is taught in schools.
+                        </p>
+
+
+                        <div class="resource-link">
+
+                            <a
+                                href="https://curriculum.nsw.edu.au/learning-areas/languages/auslan-k-10-2023/overview"
+                                target="_blank"
+                                rel="noopener">
+
+                                NSW Auslan K–10 Syllabus
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="video-intro">
+
+                            <h3>
+                                Auslan in NSW schools
+                            </h3>
+
+                            <p>
+                                This resource provides an introduction to the
+                                development of the NSW Auslan syllabus and
+                                its place within NSW schools.
+                            </p>
+
+
+                            <div class="video-wrapper">
+
+                                <iframe
+                                    src="https://www.youtube.com/embed/f_F9MjJ5kTw"
+                                    title="Auslan K-10 Syllabus"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="strategy">
+
+                        <h3>
+                            Indigenous Sign Languages
+                        </h3>
+
+                        <p>
+                            Australian Indigenous sign languages are an
+                            important part of the diverse linguistic landscape
+                            of Aboriginal and Torres Strait Islander
+                            communities. They are not simply alternative
+                            communication systems for Deaf people. In some
+                            communities, Indigenous sign languages may function
+                            alongside spoken languages and be used by both
+                            hearing and non-hearing community members.
+                        </p>
+
+                        <p>
+                            This is particularly important for teachers working
+                            in communities where Indigenous sign languages are
+                            used. For some students, an Indigenous sign language
+                            may be part of the language used in their home or
+                            community. Teachers therefore need to consider the
+                            student's broader linguistic and cultural context
+                            rather than assuming that Auslan or spoken English
+                            is their primary means of communication.
+                        </p>
+
+
+                        <div class="action-box">
+
+                            <h3>
+                                Why this matters for teachers
+                            </h3>
+
+                            <p>
+                                Understanding the linguistic diversity of
+                                Aboriginal and Torres Strait Islander
+                                communities can help teachers avoid making
+                                assumptions about how students communicate.
+                                Language, culture, identity and community are
+                                closely connected, and these factors should be
+                                considered when planning inclusive teaching
+                                and learning.
+                            </p>
+
+                        </div>
+
+
+                        <div class="resource-link">
+
+                            <a
+                                href="https://www.abc.net.au/news/2021-06-19/australian-indigenous-sign-languages/100185504"
+                                target="_blank"
+                                rel="noopener">
+
+                                ABC News – Aboriginal sign languages have been
+                                used for thousands of years
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="resource-link">
+
+                            <a
+                                href="https://www.iltyemiltyem.com/film/sign-in-the-hansen-river-2014/"
+                                target="_blank"
+                                rel="noopener">
+
+                                Sign in the Hansen River
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="video-intro">
+
+                            <h3>
+                                A More Inclusive Future:
+                                A Story from Kempsey High School
+                            </h3>
+
+                            <p>
+                                This video explores work involving Indigenous
+                                sign languages and the potential for greater
+                                recognition of these languages within education.
+                            </p>
+
+
+                            <div class="video-wrapper">
+
+                                <iframe
+                                    src="https://www.youtube.com/embed/Zu2rqu7snus"
+                                    title="A More Inclusive Future: A Story from Kempsey High School"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </details>
+            <!-- DLO 8 -->
+<details class="dlo">
+    <summary>
+        <span class="dlo-number">DLO 8</span>
+        <span class="dlo-title">Utilise student strengths</span>
+        <svg class="dlo-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18" stroke="#31546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </summary>
+
+    <div class="dlo-body">
 
         <p>
-            Build regular opportunities for all students to check and
-            demonstrate their understanding. Avoid assuming that a student
-            has understood simply because they appear to be listening.
-            Encourage questions and provide alternative ways to revisit
-            information when needed.
+            By removing challenges for students who are deaf or hard of hearing,
+            teachers are able to create a learning environment that is inclusive,
+            engaging and supportive. The DOE (2026) outlines that to create this
+            type of inclusive environment for all students, teachers must also
+            recognise and draw upon students' strengths, needs, interests and
+            prior learning.
         </p>
-
-    </div>
-
-
-    <h2>
-        Incorporating Sign Languages into Classrooms
-    </h2>
-
-    <p>
-        Sign language can be an important part of language, identity and
-        education for some students who are deaf or hard of hearing.
-        Communication preferences vary considerably between students, so
-        teachers should avoid assuming that every Deaf student uses Auslan.
-        Instead, schools should work with students, families and relevant
-        Deaf education professionals to understand the student's preferred
-        language and communication methods.
-    </p>
-
-
-    <h3>
-        Auslan K–10 Syllabus (2023)
-    </h3>
-
-    <p>
-        NSW introduced the Auslan K–10 Syllabus in 2023. Implementation
-        commenced in 2026, giving NSW schools the opportunity to offer Auslan
-        within K–6 language programs, as the selected language for the
-        mandatory 100 hours of language study in Years 7–10, and as a Stage 5
-        language elective.
-    </p>
-
-    <p>
-        The syllabus recognises Auslan as a distinct language with its own
-        grammar and vocabulary and emphasises the relationship between
-        language, culture and identity. It also highlights the importance of
-        consultation with the Deaf community when Auslan is taught in schools.
-    </p>
-
-
-    <div class="resource-link">
-
-        <a
-            href="https://curriculum.nsw.edu.au/learning-areas/languages/auslan-k-10-2023/overview"
-            target="_blank"
-            rel="noopener">
-            NSW Auslan K–10 Syllabus
-        </a>
-
-    </div>
-
-
-    <div class="video-intro">
-
-        <h3>
-            Auslan in NSW schools
-        </h3>
 
         <p>
-            This resource provides an introduction to the development of the
-            NSW Auslan syllabus and its place within NSW schools.
+            Marschark et al. (2011) explores the strengths of deaf and hard of
+            hearing students, highlighting skills such as visual-spatial processing
+            and learning, mental imagery abilities, and visual-spatial memory.
+            The Department for Education, Government of South Australia (n.d.)
+            further outlines how students who are deaf or hard of hearing often
+            demonstrate the strength of learning through hands-on, kinaesthetic
+            activities.
         </p>
+
+        <!-- Interactive video -->
+        <div class="video-intro">
+            <h3>Explore: Identifying students' strengths</h3>
+            <p>
+                Watch the video and consider how a teacher could identify and
+                build upon the strengths of a student who is deaf or hard of hearing.
+            </p>
+        </div>
 
         <div class="video-wrapper">
-
             <iframe
-                src="https://www.youtube.com/embed/f_F9MjJ5kTw"
-                title="Auslan K-10 Syllabus"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src="https://www.youtube.com/embed/c0qF0lPeOmg"
+                title="Identifying Students Strengths"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
+        </div>
+
+        <!-- Interactive activity -->
+        <div class="scenario">
+            <h3>Think like a teacher</h3>
+            <p>
+                A student who is deaf or hard of hearing is learning a new concept.
+                Which approach best builds on the strengths described in this DLO?
+            </p>
+
+            <div class="options">
+
+                <label class="option correct">
+                    <input type="radio" name="strengths-scenario">
+                    <strong>A.</strong> Provide diagrams, visual examples and a
+                    hands-on activity that allows the student to explore the concept.
+                    <div class="feedback">
+                        <strong>Correct.</strong> This approach draws on visual-spatial
+                        processing and kinaesthetic learning while providing multiple
+                        ways for the student to engage with the content.
+                    </div>
+                </label>
+
+                <label class="option incorrect">
+                    <input type="radio" name="strengths-scenario">
+                    <strong>B.</strong> Provide a long verbal explanation and ask the
+                    student to remember the information.
+                    <div class="feedback">
+                        <strong>Consider again.</strong> While verbal explanations may
+                        be useful, relying heavily on verbal information does not
+                        necessarily build on the visual-spatial and kinaesthetic
+                        strengths described in this DLO.
+                    </div>
+                </label>
+
+                <label class="option incorrect">
+                    <input type="radio" name="strengths-scenario">
+                    <strong>C.</strong> Give the student exactly the same learning
+                    materials as everyone else without considering how they learn best.
+                    <div class="feedback">
+                        <strong>Consider again.</strong> Inclusive teaching involves
+                        recognising students' individual strengths, needs, interests
+                        and prior learning rather than assuming one approach works
+                        equally well for everyone.
+                    </div>
+                </label>
+
+            </div>
+        </div>
+
+        <h3>Four strengths teachers can utilise</h3>
+
+        <!-- Strength 1 -->
+        <div class="strategy">
+            <h3>1. Visual-spatial processing</h3>
+
+            <p>
+                The Department for Education, Government of South Australia (n.d.)
+                outlines that students who are deaf or hard of hearing often learn
+                effectively by processing information visually and spatially.
+                Teachers can focus on this strength, supporting students'
+                visual-spatial processing and learning through visual representations,
+                spatial organisation and visually presented information
+                (Marschark et al., 2011).
+            </p>
+
+            <p>
+                Rather than relying heavily on verbal explanations, teachers can
+                incorporate diagrams, graphics, maps, images and spatial arrangements,
+                building on students' strengths to support, include and engage them
+                in positive learning.
+            </p>
+
+            <div class="key-practice">
+                <strong>Teacher practice:</strong>
+                Use diagrams, maps, images, models and spatial organisation to
+                represent information visually.
+            </div>
+        </div>
+
+        <!-- Strength 2 -->
+        <div class="strategy">
+            <h3>2. Mental imagery abilities</h3>
+
+            <p>
+                Students who are deaf or hard of hearing often possess strengths in
+                visual learning and mental imagery (Department for Education,
+                Government of South Australia, n.d.). Teachers can build on these
+                skills by incorporating and designing instruction that allows
+                students to utilise their mental imagery abilities.
+            </p>
+
+            <p>
+                For example, students could visualise how something changes or
+                moves, rotate shapes mentally, or imagine a setting in a story.
+                Marschark et al. (2011) further highlights that students who are
+                deaf or hard of hearing often equal or exceed hearing individuals
+                in generating and manipulating mental images.
+            </p>
+
+            <div class="key-practice">
+                <strong>Teacher practice:</strong>
+                Ask students to visualise movement, change, shapes, objects,
+                locations or settings as part of learning activities.
+            </div>
+        </div>
+
+        <!-- Strength 3 -->
+        <div class="strategy">
+            <h3>3. Visual-spatial memory</h3>
+
+            <p>
+                Marschark et al. (2011) outlines how students who are deaf or hard
+                of hearing, in particular native signers, often demonstrate stronger
+                memory through visual-spatial relationships.
+            </p>
+
+            <p>
+                Students may retain information more easily through visual location,
+                spatial relationships, patterns and organisation rather than long
+                verbal explanations of information. Teachers can support, engage
+                and include students who are deaf or hard of hearing by presenting
+                information visually and spatially, whilst also explicitly teaching
+                various strategies to remember different types of information
+                (Marschark et al., 2011).
+            </p>
+
+            <div class="key-practice">
+                <strong>Teacher practice:</strong>
+                Organise information through visual sequences, patterns, locations,
+                diagrams and spatial relationships to support memory.
+            </div>
+        </div>
+
+        <!-- Strength 4 -->
+        <div class="strategy">
+            <h3>4. Hands-on, kinaesthetic learning</h3>
+
+            <p>
+                Students who are deaf or hard of hearing may possess strong
+                hands-on, kinaesthetic learning skills (Department for Education,
+                Government of South Australia, n.d.).
+            </p>
+
+            <p>
+                By incorporating hands-on activities into learning, teachers can
+                include, engage and support students who are deaf or hard of hearing
+                by building on their strengths, needs and interests.
+            </p>
+
+            <div class="key-practice">
+                <strong>Teacher practice:</strong>
+                Provide opportunities to manipulate objects, create, experiment,
+                move, build, perform and learn through direct experience.
+            </div>
+        </div>
+
+        <!-- Key message -->
+        <div class="action-box">
+            <h3>Match teaching to strengths</h3>
+
+            <p>
+                Marschark et al. (2011) emphasises how deaf and hard of hearing
+                students have the capacity to make equivalent learning achievements
+                to their peers when teaching is matched to their strengths,
+                interests and needs.
+            </p>
+
+            <p>
+                The goal is not to assume that all students who are deaf or hard of
+                hearing learn in the same way. Instead, teachers should identify
+                individual strengths and provide opportunities for students to use
+                those strengths as part of their learning.
+            </p>
+        </div>
+
+        <!-- Quick reflection -->
+        <div class="key-practice">
+            <strong>Quick reflection:</strong>
+            Think about a lesson you teach. Where could you replace a mainly verbal
+            explanation with a visual, spatial, mental imagery or hands-on approach?
+        </div>
+
+    </div>
+</details>
+
 
         </div>
 
     </div>
-
-
-    <h2>
-        Indigenous Sign Languages
-    </h2>
-
-    <p>
-        Australian Indigenous sign languages are an important part of the
-        diverse linguistic landscape of Aboriginal and Torres Strait Islander
-        communities. They are not simply alternative communication systems
-        for Deaf people. In some communities, Indigenous sign languages may
-        function alongside spoken languages and be used by both hearing and
-        non-hearing community members.
-    </p>
-
-    <p>
-        This is particularly important for teachers working in communities
-        where Indigenous sign languages are used. For some students, an
-        Indigenous sign language may be part of the language used in their
-        home or community. Teachers therefore need to consider the student's
-        broader linguistic and cultural context rather than assuming that
-        Auslan or spoken English is their primary means of communication.
-    </p>
-
-
-    <div class="action-box">
-
-        <h3>
-            Why this matters for teachers
-        </h3>
-
-        <p>
-            Understanding the linguistic diversity of Aboriginal and Torres
-            Strait Islander communities can help teachers avoid making
-            assumptions about how students communicate. Language, culture,
-            identity and community are closely connected, and these factors
-            should be considered when planning inclusive teaching and learning.
-        </p>
-
-    </div>
-
-
-    <h3>
-        Learn more about Australian Indigenous Sign Languages
-    </h3>
-
-
-    <div class="resource-link">
-
-        <a
-            href="https://www.abc.net.au/news/2021-06-19/australian-indigenous-sign-languages/100185504"
-            target="_blank"
-            rel="noopener">
-            ABC News – Aboriginal sign languages have been used for thousands of years
-        </a>
-
-    </div>
-
-
-    <div class="resource-link">
-
-        <a
-            href="https://www.iltyemiltyem.com/film/sign-in-the-hansen-river-2014/"
-            target="_blank"
-            rel="noopener">
-            Sign in the Hansen River
-        </a>
-
-    </div>
-
-
-    <div class="video-intro">
-
-        <h3>
-            A More Inclusive Future: A Story from Kempsey High School
-        </h3>
-
-        <p>
-            This video explores work involving Indigenous sign languages and
-            the potential for greater recognition of these languages within
-            education.
-        </p>
-
-        <div class="video-wrapper">
-
-            <iframe
-                src="https://www.youtube.com/embed/Zu2rqu7snus"
-                title="A More Inclusive Future: A Story from Kempsey High School"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-    </div>
-
-
-    <h2>
-        Work With the Student, Not Just the Support
-    </h2>
-
-    <p>
-        Perhaps the most important teacher action is to involve the student
-        in decisions about their learning. A strategy that works well for one
-        student may not work for another. Students who are deaf or hard of
-        hearing are not a homogeneous group, and their communication,
-        educational and social needs can change across different contexts.
-    </p>
-
-    <p>
-        Teachers should therefore work collaboratively with students,
-        families, interpreters, support teachers and other relevant
-        professionals. The goal is not to lower expectations or remove
-        students from ordinary classroom experiences, but to remove barriers
-        that prevent them from demonstrating what they know and can do.
-    </p>
-
-
-    <div class="reflection">
-
-        <h3>
-            Reflection
-        </h3>
-
-        <p>
-            Think about a class you currently teach, or have taught recently.
-            What information in that class is primarily communicated through
-            listening?
-        </p>
-
-        <p>
-            What could you change so that the same information is also
-            accessible visually or through another form of communication?
-        </p>
-
-    </div>
-
-
-    <div class="group">
-
-        <div class="group-title">
-            Created by
-        </div>
-
-        <div class="group-members">
-            Isaac · Jessie · Mo · Jamie
-        </div>
-
-    </div>
-
-</div>
 
 </main>
 
+
 </body>
+
 </html>

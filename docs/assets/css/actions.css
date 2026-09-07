@@ -1,0 +1,731 @@
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #293241;
+    background: #f5f3ef;
+}
+
+
+/* =========================
+   FIXED SIDE NAVIGATION
+   ========================= */
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #243447;
+    color: white;
+
+    padding: 2.5rem 1.5rem;
+
+    box-shadow: 3px 0 12px rgba(36, 52, 71, 0.12);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: bold;
+    line-height: 1.3;
+
+    margin-bottom: 2.5rem;
+
+    color: #ffffff;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 0.45rem;
+}
+
+.menu a {
+    display: block;
+
+    color: #e7edf2;
+    text-decoration: none;
+
+    padding: 0.75rem 0.9rem;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.menu a:hover {
+    background: #31546a;
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+main {
+    margin-left: 250px;
+
+    max-width: 1050px;
+
+    padding: 4rem;
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+    margin-bottom: 1.5rem;
+
+    font-size: 2.4rem;
+    line-height: 1.2;
+
+    color: #243447;
+}
+
+h2 {
+    margin-bottom: 1.2rem;
+
+    font-size: 1.7rem;
+
+    color: #31546a;
+}
+
+h3 {
+    margin-bottom: 0.8rem;
+
+    color: #31546a;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+
+/* =========================
+   CONTENT CARD
+   ========================= */
+
+.about-card {
+    background: #fffdf9;
+
+    padding: 2.5rem;
+
+    border-radius: 10px;
+
+    border: 1px solid #e6e1d8;
+
+    box-shadow:
+        0 2px 8px rgba(36, 52, 71, 0.06);
+
+    max-width: 850px;
+}
+
+.about-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================
+   ACTION BOX
+   ========================= */
+
+.action-box {
+    background: #eef5f7;
+
+    border-left: 5px solid #4f7c95;
+
+    padding: 1.4rem 1.5rem;
+
+    margin: 1.5rem 0 2rem 0;
+
+    border-radius: 8px;
+}
+
+.action-box h3 {
+    margin-bottom: 0.6rem;
+
+    color: #243447;
+}
+
+
+/* =========================
+   PRACTICAL STRATEGIES
+   ========================= */
+
+.strategy {
+    margin: 1.5rem 0;
+
+    padding: 1.3rem 1.4rem;
+
+    background: #faf9f6;
+
+    border: 1px solid #e6e1d8;
+
+    border-radius: 8px;
+}
+
+.strategy h3 {
+    margin-bottom: 0.5rem;
+}
+
+.strategy ul {
+    margin: 0.8rem 0 0 1.4rem;
+}
+
+.strategy li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================
+   QUOTE
+   ========================= */
+
+blockquote {
+    margin: 1.5rem 0 2rem 0;
+
+    padding: 1.5rem 1.75rem;
+
+    background: #eef5f7;
+
+    border-left: 5px solid #4f7c95;
+
+    border-radius: 8px;
+
+    font-size: 1.08rem;
+
+    color: #293241;
+}
+
+blockquote p {
+    margin-bottom: 0.8rem;
+}
+
+blockquote cite {
+    display: block;
+
+    font-size: 0.9rem;
+
+    font-style: normal;
+
+    color: #687780;
+}
+
+
+/* =========================
+   VIDEO
+   ========================= */
+
+.video-intro {
+    margin: 2rem 0;
+
+    padding: 1.25rem;
+
+    background: #eef5f7;
+
+    border-left: 5px solid #4f7c95;
+
+    border-radius: 8px;
+}
+
+.video-intro h3 {
+    margin-bottom: 0.5rem;
+
+    color: #243447;
+}
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================
+   RESOURCE LINKS
+   ========================= */
+
+.resource-link {
+    margin: 1rem 0;
+
+    padding: 1rem 1.2rem;
+
+    background: #faf9f6;
+
+    border: 1px solid #e6e1d8;
+
+    border-radius: 7px;
+}
+
+.resource-link a {
+    color: #31546a;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.resource-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   REFLECTION
+   ========================= */
+
+.reflection {
+    margin-top: 2rem;
+
+    padding: 1.5rem;
+
+    background: #f2eee7;
+
+    border-radius: 8px;
+
+    border: 1px solid #e1dbd1;
+}
+
+.reflection h3 {
+    margin-bottom: 0.6rem;
+}
+
+
+/* =========================
+   GROUP MEMBERS
+   ========================= */
+
+.group {
+    margin-top: 2rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid #e6e1d8;
+}
+
+.group-title {
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: #7a858c;
+
+    margin-bottom: 0.5rem;
+}
+
+.group-members {
+    font-weight: bold;
+
+    color: #31546a;
+}
+
+
+/* =========================
+   DIGITAL LEARNING OBJECTS
+   ========================= */
+
+.dlo-list {
+    display: grid;
+
+    gap: 0.75rem;
+
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.dlo {
+    border: 1px solid #d9e3e8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.dlo summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.15rem 1.25rem;
+
+    background: #eef5f7;
+
+    color: #243447;
+}
+
+.dlo summary::-webkit-details-marker {
+    display: none;
+}
+
+.dlo summary:hover {
+    background: #e5f1f4;
+}
+
+.dlo-number {
+    flex-shrink: 0;
+
+    font-size: 0.78rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    color: #4f7c95;
+}
+
+.dlo-title {
+    flex: 1;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+}
+
+.dlo-arrow {
+    flex-shrink: 0;
+
+    transition: transform 0.25s ease;
+}
+
+.dlo[open] .dlo-arrow {
+    transform: rotate(90deg);
+}
+
+.dlo-body {
+    padding: 1.5rem;
+
+    border-top: 1px solid #e6e1d8;
+}
+
+
+/* =========================
+   SCENARIOS
+   ========================= */
+
+.scenario {
+    background: #faf9f6;
+
+    border-left: 4px solid #4f7c95;
+
+    padding: 1rem;
+
+    border-radius: 6px;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =========================
+   DLO OPTIONS
+   ========================= */
+
+.options,
+.choice-group {
+    display: grid;
+
+    gap: 0.75rem;
+}
+
+.option {
+    border: 1px solid #d8dee3;
+
+    border-radius: 8px;
+
+    padding: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #4f7c95;
+
+    background: #f8fbfc;
+}
+
+.option input {
+    display: none;
+}
+
+.option.correct:has(input:checked) {
+    background: #e8f5ea;
+
+    border-color: #2e7d32;
+}
+
+.option.incorrect:has(input:checked) {
+    background: #fdecec;
+
+    border-color: #c62828;
+}
+
+.feedback {
+    display: none;
+
+    margin-top: 0.6rem;
+
+    font-size: 0.92rem;
+}
+
+.option:has(input:checked) .feedback {
+    display: block;
+}
+
+
+/* =========================
+   VISUAL SUPPORT DLO
+   ========================= */
+
+.choice {
+    position: relative;
+}
+
+.choice input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.choice label {
+    display: block;
+
+    border: 1px solid #d8dee3;
+
+    border-radius: 8px;
+
+    padding: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.choice label:hover {
+    border-color: #4f7c95;
+
+    background: #f8fbfc;
+}
+
+.choice input:checked + label {
+    background: #e8f5ea;
+
+    border-color: #2e7d32;
+}
+
+.choice-icon {
+    font-size: 1.2rem;
+
+    margin-right: 0.5rem;
+}
+
+.explanation {
+    margin-top: 1.25rem;
+
+    padding: 1rem;
+
+    background: #eef5f7;
+
+    border-radius: 8px;
+
+    font-size: 0.92rem;
+
+    line-height: 1.5;
+}
+
+.key-practice {
+    margin-top: 1rem;
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    background: #faf9f6;
+}
+
+.key-practice strong {
+    color: #31546A;
+}
+
+
+/* =========================
+   RESOURCE ACCORDIONS
+   ========================= */
+
+.resource-accordion {
+    margin: 1.5rem 0;
+
+    border: 1px solid #d9e3e8;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.resource-accordion summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    padding: 1rem 1.2rem;
+
+    background: #faf9f6;
+
+    font-weight: bold;
+
+    color: #31546a;
+}
+
+.resource-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.resource-accordion summary:hover {
+    background: #f2eee7;
+}
+
+.resource-accordion summary::before {
+    content: "▸";
+
+    margin-right: 0.6rem;
+
+    transition: transform 0.2s ease;
+}
+
+.resource-accordion[open] summary::before {
+    content: "▾";
+}
+
+.resource-body {
+    padding: 1.25rem;
+
+    border-top: 1px solid #e6e1d8;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 1.5rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .menu {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 0.3rem;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        padding: 0.5rem 0.7rem;
+
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin-left: 0;
+
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .dlo summary {
+        padding: 1rem;
+    }
+
+    .dlo-body {
+        padding: 1rem;
+    }
+
+}
+
